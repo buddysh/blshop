@@ -1,0 +1,337 @@
+body{
+	font-family: "微软雅黑";
+}
+.main{
+	width: 1190px;margin: 0 auto;
+}
+#top{
+	width: 100%;
+	height: 30px;
+	min-width: 1190px;
+	background: #F7F7F7;
+	border-top: solid 1px #FFF;
+	border-bottom: solid 1px #E9E9E9;
+}
+#top1{
+	width: 86px;
+	height: 30px;
+	padding: 0 12px 0 18px;
+	float: left;
+	background: url(../image/bl.png) no-repeat 2px center;
+	line-height: 30px;
+}
+#top2{
+	width:62px;
+	height: 30px;
+	padding: 0 10px;
+	float: left;
+	line-height: 30px;
+}
+#top3{
+	float: left;
+	line-height: 30px;
+}
+#ul2{
+	width: 577px;
+	height: 30px;
+	float: right;
+}
+#ul2 li{
+	float: left;
+	width: 68px;
+	height: 30px;
+	line-height: 30px;
+}
+#ul2 li:nth-child(1){
+	width: 118px;
+	height: 30px;
+	margin: 0 1px;
+}
+#ul2 li:nth-child(1) a:nth-child(1){
+	width: 54px;height: 30px;padding: 0 10px;display: block;float: left;
+}
+#ul2 li:nth-child(2) a:nth-child(2){
+	width:24px;
+	height: 30px;
+	padding: 0 10px;
+	display: block;
+	float: left;
+}
+#bt{
+	width: 100%;
+	height: 170px;
+	padding: 20px 5px;
+	background: #f3f3f3;
+}
+dl dt{
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	font-weight: 600;
+}
+dl dd{
+	line-height: 26px;
+}
+dd a{
+	color: #555555;	font-size: 13px;
+}
+dd a:hover{
+	color: #E6133C;text-decoration: underline;
+}
+#bt dl{
+	float: left;width: 190px;
+	margin: 0 24px;padding: 0 0 0 50px;box-sizing: border-box;
+}
+#dl5{
+	width: 128px;
+}
+#logo{
+	width: 410px;height: 60px;margin-top:18px;float: left;
+}
+#logo div{
+	float: left;
+}
+#logo div:nth-child(1){
+	margin-left: 15px;
+}
+#logo div:nth-child(2){
+	margin-left: 25px;
+}
+
+#so{
+	width: 555px;
+	height: 78px;
+	padding: 0 0 0 18px;
+	float: left;
+}
+#Inpt{
+	width:555px;
+	height: 35px;
+	float: left;
+	border:solid 2px rgb(192,17,51);
+	box-sizing: border-box;
+	margin-top: 18px;
+	
+}
+#Inpt input:nth-child(1){
+	width: 438px;
+	height: 19px;
+	padding: 6px 10px;
+	border: none;
+	float: left;
+	display: block;
+}
+#Inpt input:nth-child(2){
+	width: 93px;
+	height: 31px;
+	border: none ;
+	background: rgb(192,17,51);
+	float: left;
+	display: block;
+}
+#first-a{
+	width: 555px;margin-top: 10px;
+	float: left;	
+}
+#first-a a{
+	font-size: 12px;color: #aaa;padding: 0px 5px;border-right: #aaa solid 1px;
+}
+#first-a a:hover{
+	color: #C01133;text-decoration: underline;
+}
+#black{
+	width: 100%;
+	height: 35px;
+	background: #000000;
+}
+#black #txt{
+	width:150px;float: left;
+	padding:0 20px;
+}
+#txt a{
+	color:#fff;
+	font-size: 16px;
+	height: 35px;line-height: 35px;
+}
+#black ul li{
+	float: left;
+	height: 35px;
+	padding: 0 20px;
+	cursor: pointer;
+}
+#black ul li:hover{
+	background: #E6133C;
+}
+#black ul li a{
+	color: #fff;font-size: 16px;height: 35px;
+	line-height: 35px;
+}
+#left{
+	width: 450px;
+	height: 598px;
+	float: left;position: relative;
+}
+#bigArea{
+	position: absolute;left: 0px;top: 0px;
+	overflow: hidden;
+	width: 448px;
+	height: 448px;
+}
+#smallArea{
+	width: 100px;
+	height: 100px;
+	float: left;
+}
+.namebox{
+	width: 710px;height: 44px;
+}
+.namebox p{
+	height: 44px;color: #33333;
+	line-height: 44px;
+	font-size:22px;
+}
+#bebox{
+	width: 710px;height: 106px;margin-top: 16px;
+}
+#redbox {
+	width: 710px;height: 36px;background: url(../images/pur.png) no-repeat 0px 0px;
+}
+#redbox a:nth-child(1){
+	padding: 5px 20px;font-size: 16px;color: #fff;font-weight: 600;line-height: 26px;
+	height: 26px;display: block;float: left;
+}
+#redbox a:nth-child(2){
+	height: 36px;color: #FFF;
+	font-size: 12px;line-height: 36px;padding: 0px 20px;
+}
+#redbox a:nth-child(4){
+	height: 36px;color: #FFF;
+	font-size: 12px;line-height: 36px;padding: 0px 15px;
+	float: right;
+}
+#redbox a:nth-child(4):hover{
+	text-decoration: underline;cursor: pointer;
+}
+#prbox{
+	width: 710px;height: 68px;
+	border-top: dashed 1px #ddd;
+	border-bottom: dashed 1px #ddd;
+	background: rgb(249,249,249);
+}
+#prbox1 a{
+	width:55px;height: 68px;line-height: 68px;display: block;float: left;padding: 0px 10px;font-size: 12px;color: #000000;
+}
+.pricebox {
+	width: 80px;height: 68px;float: left;
+}
+.pricebox p{
+	color: #E6133C;font-size: 20px;line-height: 68px;font-weight: 600;
+} 
+#rate{
+	padding:  3px 5px;
+	background: rgb(246,133,135);
+	width:30px;height: 20px;
+	border-radius: 5px;
+	float: left;
+	margin-top: 23px;
+}
+#rate a{
+	font-size: 12px;color: #fff;font-weight: 600;line-height: 20px;
+}
+#costbox{
+	float: left;height: 68px;margin-left: 15px;
+}
+#costbox a{
+	font-size: 12px;color: #999;line-height: 68px;
+}
+.left{
+	width: 50px;height: 22px;
+	padding-left: 10px;
+	float: left;
+	margin-right: 15px;
+}
+.waibao {
+	width: 710px;height: 37px;padding: 5px 0;
+	margin: 5px 0;box-sizing: border-box;
+}
+.waibao a{
+	line-height: 26px;
+}
+.waibao div:nth-child(3):hover{
+	text-decoration: underline;
+}
+#olli li{
+	margin-top: 10px;
+	margin-bottom: 9px;
+	list-style: disc;
+	margin-left: 95px;
+	color: #666666;
+}
+#olli li:hover{
+	color: #111111;
+}
+#box-two{
+	float: left;
+}
+#box-two div{
+	width:166px;height: 48px;border: solid 1px #E6133C;
+	margin-right: 10px;text-align: center;line-height: 48px;
+	font-size: 16px;font-weight: 700;float: left;cursor: pointer;
+}
+#box-two div:nth-child(1){
+	background: #fff;color:  rgb(254,110,113);
+}
+#box-two div:nth-child(2){
+	background: rgb(254,110,113);color: #fff;
+}
+#box-two div:nth-child(3){
+	width: 48px;
+	height: 48px;
+	font-size: 14px;font-weight: 100;border: #d2d2d2 solid 1px;color: #d2d2d2;
+}
+#smallImg{
+	border: solid 1px #dedede;width: 448px;height: 448px;overflow: hidden;
+}
+#smallArea{
+	width: 100px;height: 100px;background: rgba(255,255,255,0.7);position: absolute;display: none;
+}
+#bigArea{
+	width: 448px;height: 448px;border: solid 1px #dedede;overflow: hidden;position: absolute;
+	left: 452px;top: 0px;display: none;
+}
+#bigImg{
+	position: absolute;left: 0;top: 0;
+}
+#four{
+	width: 450px;height: 100px;margin-top: 20px;
+}
+#four div{
+	width: 100px;height: 100px;margin-left: 10px;border: solid 1px #dedede;overflow: hidden;box-sizing: border-box;
+	float: left;cursor: pointer;
+}
+#four div img{
+	width: 100px;height: 100px;
+}
+#tuijian p{
+	font-size: 22px;color: #000000;font-weight: 600;margin-bottom: 20px;
+}
+#boxtj{
+	width: 100%;
+	height: 360px;
+}
+#tj li{
+	width: 200px;height: 280px;border: solid 1px #dedede;float: left;margin-right: 36px;
+}
+#tj li img{
+	width: 200px;
+	height: 200px;
+}
+#tj li p:hover{
+	text-decoration: underline;
+}
+#tj li p{
+	font-size: 12px;font-weight: 100;width: 180px;line-height: 16px;margin-left: 10px;
+}
+#tj a {
+	font-size: 16px;font-weight: 100;
+}

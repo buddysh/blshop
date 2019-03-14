@@ -1,0 +1,10 @@
+.header-img{height:90px; min-width:1190px; margin:0px auto; text-align:center; overflow:hidden; position:relative;z-index:199;}
+.header-pw{position:relative; background:#FFF;}
+.header-pw i{width:29px; display:block; height:29px; position:absolute; top:10px; right:5px; cursor:pointer; background:url(//k10.iblimg.com/resources/v4.0/css/i/header-bg.png) no-repeat; background-position:0px -181px;}
+.header-pw:hover i{background-position:0px -152px;}
+.header-pw i:hover{
+	background-position:0px -181px;
+}
+.w960 .header-img{
+	min-width:950px;
+}

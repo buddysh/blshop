@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link type="text/css" rel="stylesheet" href="css/reset.css" />
+		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<style>
+			ul,li {list-style: none;}
+			.img {
+				width: 40px;
+				height: 30px;
+			}
+			.num {
+				width: 30px;
+				text-align: center;
+			}
+			body{
+	position: relative;width: 100%;
+}
+.main{
+	width: 1190px;margin: 0 auto;
+}
+.aposition{
+	position: relative;margin-top: 20px;
+}
+img{cursor: pointer;}
+/*头部顶栏样式*/
+.top {
+	height: 32px;width: 100%;border-bottom: solid 1px #e9e9e9;border-top: solid 1px #fff;background: #f7f7f7;box-sizing: border-box;
+}
+.top a{cursor: pointer;}
+.top a:hover{color: red;}
+.top .left-top{
+	display: inline-block;
+}
+.top .left-top li,.top .right-top li{
+	display: inline-block;line-height: 30px;
+}
+.top .left-top li a:hover,.inpt-ul li a:hover{
+	color: #E6133C;
+}
+.top .right-top{
+	float: right;
+}
+#list111 li{
+	width: 100%;height: 50px;background:#fffaf1;
+	padding: 10px;margin-bottom: 2px;border: solid 1px #C01133;
+}#list111 li img{
+	width: 50px;height: 50px;
+}
+.ali{
+	float: right;margin-right: 30px;
+}
+#acc{
+	display: none;
+}
+	.ali input{
+		width: 80px;height: 42px;background: #C01133;border: none;color:#fff;font-size: 22px;
+	}
+	#delSelect{
+		float: right;
+	}
+	.ppp{font-size: 24px;}
+	#da{
+		min-height: 400px;
+	}
+		</style>
+		
+		<script src="js/jquery-1.12.3.js"></script>
+		<script src="js/jquery.cookie.js"></script>
+		<script>
+			$(function(){
+					$("a").attr("target","_blank");
+				//获取购物车的cookie数据,并用节点显示
+				refresh();
+				function refresh() { 
+					
+					var arr = $.cookie("cart");
+					if (arr) {
+						arr = JSON.parse(arr);
+						
+						//先清除旧节点
+						$("#list111").empty();
+						
+						//再添加新节点
+						var totalPrice = 0; //总价
+						
+						//遍历数组
+						for (var i=0; i<arr.length; i++) {
+							var obj = arr[i];
+							
+							//创建li节点
+							var li = $("<li></li>").appendTo("#list111");
+							
+							//是否选中
+							if (obj.checked) {
+								$('<input class="ckbox" type="checkbox" checked="checked" />').appendTo(li);
+							}
+							else {
+								$('<input class="ckbox" type="checkbox" />').appendTo(li);
+							}
+
+							$('<img style="margin-left: 30px;width: 50px;" class="img" src="'+ obj.img +'" >').appendTo(li);
+							
+							$('<span style="display: inline-block;margin-left: 30px;width: 50px;" class="name">'+ obj.name +'</span>').appendTo(li);
+							$('<span style="width: 50px;display: inline-block;text-align: center;" class="price">'+obj.price +'</span>').appendTo(li);
+							$('<input class="reduce" type="button" value="-" style="width: 20px;" />').appendTo(li);
+							$('<input class="num" type="text" value="'+ obj.num +'"style="width: 20px;" />').appendTo(li);
+							$('<input class="add" type="button" value="+"style="width: 20px;" />').appendTo(li);
+							$('<a style="margin-left: 40px;" class="del" href="javascript:;">删除</a>').appendTo(li);
+							
+							//计算总价
+							if (obj.checked) {
+								totalPrice += obj.price * obj.num;
+							}
+						}
+						
+						//显示总价
+						$("#total").html(totalPrice);
+					}
+					else {
+						console.log("购物车还没有商品， 请先购买！");
+					}
+				}
+				
+				//+
+				$("#list111").on("click", ".add", function(){
+					var index = $(this).index("#list111 .add");
+					
+					//获取cookie并修改
+					var arr = JSON.parse($.cookie("cart"));
+					arr[index].num++;
+					
+					//覆盖原来的cookie
+					$.cookie("cart", JSON.stringify(arr), {expires:30, path:"/"});
+					
+					//刷新节点数据
+					refresh();
+				})
+				
+				//-
+				$("#list111").on("click", ".reduce", function(){
+					var index = $(this).index("#list111 .reduce");
+					
+					//获取cookie并修改
+					var arr = JSON.parse($.cookie("cart"));
+					arr[index].num--;
+					if (arr[index].num < 1) {
+						arr[index].num = 1;
+					}
+					
+					//覆盖原来的cookie
+					$.cookie("cart", JSON.stringify(arr), {expires:30, path:"/"});
+					
+					//刷新节点数据
+					refresh();
+				})
+				
+				
+				//删除
+				$("#list111").on("click", ".del", function(){
+					var index = $(this).index("#list111 .del");
+					
+					//获取cookie并修改
+					var arr = JSON.parse($.cookie("cart"));
+					arr.splice(index, 1); //删除数组arr的第index个
+					
+					//覆盖原来的cookie
+					$.cookie("cart", JSON.stringify(arr), {expires:30, path:"/"});
+					
+					isAllSelect();
+					
+					//刷新节点数据
+					refresh();
+				})
+				
+				
+				//勾选
+				$("#list111").on("click", ".ckbox", function(){
+					var index = $(this).index("#list111 .ckbox");
+					
+					//获取cookie并修改
+					var arr = JSON.parse($.cookie("cart"));
+					arr[index].checked = !arr[index].checked;
+					
+					//覆盖原来的cookie
+					$.cookie("cart", JSON.stringify(arr), {expires:30, path:"/"});
+					
+					//判断是否全选了
+					isAllSelect();
+					
+					//刷新节点数据
+					refresh();
+				})
+				
+				//判断是否全部勾选了
+				isAllSelect();
+				function isAllSelect(){
+					
+					//判断是否为undefined
+					var arr = $.cookie("cart");
+					if (!arr) {
+						return;
+					}
+					
+					var arr = JSON.parse($.cookie("cart"));
+					
+					var sum = 0;
+					for (var i=0; i<arr.length; i++) {
+						sum += arr[i].checked;
+					}
+					
+					//全选了
+					if (arr.length!=0 && sum==arr.length) {
+						$("#allSelect").prop("checked", true);
+					}
+					//未全选
+					else {
+						$("#allSelect").prop("checked", false);
+					}
+				}
+				
+				//全选
+				$("#allSelect").click(function(){
+					//判断是否为undefined
+					var arr = $.cookie("cart");
+					if (!arr) {
+						return;
+					}
+					
+					var arr = JSON.parse($.cookie("cart"));
+					for (var i=0; i<arr.length; i++) {
+						//全选
+						if ($(this).prop("checked")){
+							arr[i].checked = true;
+						}
+						//全不选
+						else {
+							arr[i].checked = false;
+						}
+					}
+					$.cookie("cart", JSON.stringify(arr), {expires:30, path:"/"});
+					
+					//刷新
+					refresh();
+				})
+				
+				//删除选中
+				$("#delSelect").click(function(){
+					
+					//获取cookie并修改
+					var arr = JSON.parse($.cookie("cart"));
+					
+					//将未选中的商品添加到新数组newArr中，再将newArr保存到cookie
+					var newArr = [];
+					for (var i=0; i<arr.length; i++) {
+						if (!arr[i].checked) {
+							newArr.push(arr[i]);
+						}
+					}
+				    $("#acc").css("display","block")
+					//覆盖原来的cookie
+					$.cookie("cart", JSON.stringify(newArr), {expires:30, path:"/"});
+					
+					isAllSelect();
+					
+					//刷新节点数据
+					refresh();
+				})
+				
+				
+				
+				
+				
+				var arrx = [];
+				
+				//先获取数据并创建节点，显示数据
+				$.get("JSON/sp.json", function(data){
+					console.log(data);
+					arrx = data;
+					//遍历json中的所有商品数据，并用节点显示
+					for (var i=0; i<arrx.length; i++) {
+						var obj = arrx[i];
+						//创建li节点			
+					}
+					
+				})
+				
+				//点击商品
+				$(".img").click(function(){
+					
+					var index = $(this).id;
+					//console.log(index);
+					
+					var obj = arrx[index]; //所点击的商品
+					
+					
+					//将当前点击的商品数据加入购物车（cookie）
+	
+					
+					//判断原来的购物车中是否有相同商品
+					
+					
+					//将arr2添加到cookie中
+					location.href = "shopwhat.html?id=" + obj.id;
+				})
+				
+				
+				
+				
+				
+				
+				
+			})
+		</script>
+	</head>
+	<body>
+		<div class="top" id="top">
+			<div class="main">
+				<ul class="left-top">
+					<li><img src="images/top1.jpg" /></li>
+					<li>百联集团旗下全渠道电商平台</li>
+					<li><a href="">网站导航</a></li>
+					<li><a href="">消息</a></li>
+				</ul>
+				<ul class="right-top">
+					<li><a href="html/login.html" class="iconfont">&#xe601;  请登录</a>&nbsp;&nbsp;<a href="html/register.html">注册</a></li>
+					<li><a href="">我的订单</a></li>
+					<li><a href="">我的百联</a></li>
+					<li><a href="">充值缴费</a></li>
+					<li><a href="">客户服务</a></li>
+					<li><a href="">掌上百联</a></li>
+					<li><a href="">购物车</a></li>
+				</ul>
+			</div>
+
+		</div>	
+		<div class="main" style="margin-top: 20px;">
+			<a href="index.html"><img src="images/banner.jpg"/></a>
+		</div>	
+		<div class="main" style="margin-top: 20px;" id="da">
+			<div style="float: left;">
+				全选<input type="checkbox" checked="checked" id="allSelect" />
+			</div>
+			<div style="float: right;"><a style="float: left;">登录可永久保存购物车</a></div>
+			<br  />
+			<hr />
+			<ul id="list111">
+				<li id="acc"><p>您不打算买点什么吗？你个穷逼</p></li>
+			</ul>
+			<p class="ppp">总价：<span id="total">0</span>元</p>
+			<a id="delSelect" href="javascript:;">删除选中</a>			
+			
+			<div class="ali">
+				<input type="button" value="付款" />
+			</div>
+		
+		</div>
+		
+		<div class="bott">
+			<div class="main" id="sx">
+				<ul id="xs">
+					<li>关于我们</li>
+					<li>联系我们</li>
+					<li>加盟合作</li>
+					<li>诚征英才</li>
+					<li>友情链接</li>
+				</ul>
+				<p>百联集团有限公司旗下 上海百联全渠道电子商务有限公司版权所有       |   客服电话：400-900-8800    |    沪ICP备15028847号</p>
+				<p><a href="http://res12.iblimg.com/respc-1/resources/v4.0/img/yaopingzigezheng.png?bl_mmc=blemall_-_0_-_0_-_0">互联网药品信息服务资质证书编号：沪-（非营业性）-2016-0044</a></p>
+				<ul id="xs1">
+					<li>
+						<img src="images/ha/gongan.png" />
+						<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010102002366&bl_mmc=blemall_-_0_-_0_-_0">沪公网安备 31010102002366号  </a>
+					</li>
+					<li>
+						<img src="images/ha/gongs.png" />
+						<a href="http://shwg.dianping.com/?bl_mmc=blemall_-_0_-_0_-_0">网购大家评</a>
+					</li>
+					<li>
+						<img src="images/ha/wangjing.png" />
+						<a href="http://218.242.124.22:8081/businessCheck/verifKey.do?showType=extShow&serial=9031000020160729145737000001099658-SAIC_SHOW_310000-20160406145114141192&signData=MEYCIQCUhx+ulQL4t9jJgfgCH1oeTxexuWOVww3Hel3/UlRyLQIhAO2fVtZDl0EkYb0p/3M50cXqe694wDQoJNuUKNdQNOWf&bl_mmc=blemall_-_0_-_0_-_0">上海工商</a>
+					</li>
+					<li>
+						<img src="images/ha/zhizhao.png" />
+						<a href="http://promotion.bl.com/nc/PC_HDGL20170407000001552_1592.html?bl_mmc=blemall_-_0_-_0_-_0">经营执照</a>
+					</li>
+				</ul>
+			</div>
+		</div>	
+	</body>
+</html>

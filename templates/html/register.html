@@ -1,0 +1,113 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>欢迎注册--百联</title>
+		<link href="{% static 'css/reset.css' %}"  type="text/css" rel="stylesheet" />
+{#        <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">#}
+
+		<link href="{% static 'css/regist.css' %}"  type="text/css" rel="stylesheet" />
+{#		<link href="{% static 'css/registe.css' %}"  type="text/css" rel="stylesheet" />#}
+		<script src="{% static 'js/jquery-1.12.3.js' %}"></script>
+		<script src="{% static 'js/jquery.cookie.js' %}"></script>
+{#		<script src="{% static 'js/gVerify.js' %}"></script>#}
+{#		<script src="{% static 'js/myregister.js' %}"></script>#}
+		<script src="{% static 'js/register.js' %}"></script>
+	</head>
+	<body>
+		<div class="top main">
+			<a href="http://www.bl.com/?bl_mmc=blemall_-_0_-_0_-_0"><img src="{% static 'images/logo.png' %}" style="width: 159px;" /></a>
+			<img src="{% static 'images/yonghu.png' %}" style="width: 127px;" />
+		</div>
+		<div class="box main">
+			<div class="box_p">
+				<a style="color: red;">您好，感谢您加入i百联</a>
+				<div class="right-a">
+					<a>如有账号，请 </a>
+					<a href="{% url 'app:login' %}" style="color:blue !important">登录</a>
+				</div>
+			</div>
+
+            <form action="{% url 'app:register' %}" method="post">
+                {% csrf_token %}
+                <div class="form-inpt">
+					<div class="inpt1">
+						<div class="inpt-i">
+							<i>*</i>用户名:
+						</div>
+						<div class="input-1">
+							<input class="inpt-show" name="name" id="inpt-show1" type="text" placeholder="4-20位字符，支持字母或字母与数字组合" />
+						</div>
+						<span>
+							<img class='inpt-show1' src="{% static 'images/yn.png' %}" />
+							<a>请重新输入用户名</a>
+						</span>
+					</div>
+					<div class="inpt1">
+						<div class="inpt-i">
+							<i>*</i>登录密码:
+						</div>
+						<div class="input-1">
+							<input class="inpt-show" name="password" id="inpt-show2" type="password" placeholder="6-20位字符" />
+						</div>
+						<span>
+							<img class="inpt-show2" src="{% static 'images/yn.png' %}" />
+							<a></a>
+						</span>
+					</div>
+					<div class="inpt1">
+						<div class="inpt-i">
+							<i>*</i>确认密码:
+						</div>
+						<div class="input-1">
+							<input class="inpt-show" id="inpt-show3" type="password" placeholder="请再次输入密码" />
+						</div>
+						<span>
+							<img class="inpt-show3" src="{% static 'images/yn.png' %}" />
+							<a></a>
+						</span>
+					</div>
+
+					<div class="inpt1">
+						<div class="inpt-i">
+							<i>*</i>电子邮箱:
+						</div>
+						<div class="input-1">
+							<input class="inpt-show" name="email" id="inpt-show7" type="email" placeholder="请输入有效邮箱" required />
+						</div>
+						<span>
+							<img class="inpt-show7" src="{% static 'images/yn.png' %}" />
+							<a></a>
+						</span>
+					</div>
+					<div class="inpt1">
+						<div class="inpt-i"></div>
+						<input type="checkbox" id="check" />
+						<a>   我已阅读并同意   </a>
+						<a style="color: blue;" href="http://help.bl.com/articleDetailed.html?articleId=382&&categoryType=help&bl_mmc=blemall_-_0_-_0_-_0">《百联通会员注册协议》</a>
+						<br /><br />
+						<input class="input-1" id="inpt-show8" type="submit" value="立即注册 完成绑定" />
+					</div>
+			</div>
+            </form>
+
+		</div>
+		<div class="bot">
+			<div class="main">
+				<div>
+					<a href="">关于我们</a>
+					<a href="">联系我们</a>
+					<a href="">加盟合作</a>
+					<a href="">诚征英才</a>
+					<a href="">友情链接</a>					
+				</div>
+				<div>
+					<p>上海百联全渠道电子商务有限公司 版权所有 | 沪ICP备15028847号</p>
+					<p>联系地址：上海市普陀区真光路1258号百联中环广场6楼 | 联系电话：021-52629933 | 咨询热线：400-900-8800</p>
+					<p>本企业已通过ISO9001:2000 质量管理体系标准认证 | 认证注册号：04206Q10079ROM | 认可注册号：CNAB042-Q | 增值电信业务经营许可证：沪B2-20100062 97.33</p>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

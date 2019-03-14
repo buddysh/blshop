@@ -1,0 +1,37 @@
+.header-h25{background:#FFF; height:25px; position:relative; z-index:198;}
+.header-top{height:24px; border:1px solid #e0db65; padding:0px 10px; background:#feffd7; border-top:0px; font-family:'Microsoft YaHei';}
+.header-top-left{float:left; margin-left:5px; line-height:24px; display:inline-block; color:#333;}
+.header-top-left a:link,.header-top-left a:visited{
+	color:#666666;
+}
+.header-top-left a:hover{
+	color:#e6133c;
+}
+a.header-top-right:link,a.header-top-right:visited{float:right; color:#ad865d; line-height:24px;}
+.header-top-left i{
+	float:left;
+	height:14px;
+	width:16px;
+	background:url(//k10.iblimg.com/resources/v4.0/css/i/header-bg.png) no-repeat;
+	background-position:0px -138px;
+	display:inline-block;
+	margin-top:5px;
+}
+.header-top-left span{
+	margin-left:8px;
+	display:inline;
+	float:left;
+}
+.header-top-right span{
+	float:left;
+}
+.header-top-right i{
+	float:left;
+	margin-left:7px;
+	display:inline-block;
+	width:8px;
+	height:8px;
+	background:url(//k10.iblimg.com/resources/v4.0/css/i/header-bg.png) no-repeat;
+	background-position:0px -130px;
+	margin-top:8px;
+}

@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/car.css" />
+		<script src="js/jquery-1.12.3.js"></script>
+		<script src="js/jquery.cookie.js"></script>		
+		<script>
+			$(function(){
+				$("a").attr("target","_blank");
+				//获取购物车的cookie数据,并用节点显示
+				refresh();
+				function refresh() { 	
+					var arr = $.cookie("cart");
+					if (arr) {
+						arr = JSON.parse(arr);
+						//先清除旧节点
+						$("#list").empty();						
+						//再添加新节点
+						var totalPrice = 0; //总价					
+						//遍历数组
+						var sum = 0;
+						for (var i=0; i<arr.length; i++) {
+							var obj = arr[i];		
+							
+							//创建li节点
+							var li = $("<li></li>").appendTo("#list");							
+							//是否选中
+							if (obj.checked) {
+								$('<input class="ckbox" type="checkbox" checked="checked" />').appendTo(li);
+							}
+							else {
+								$('<input class="ckbox" type="checkbox" />').appendTo(li);
+							}
+							$('<img class="img" src="'+ obj.img +'" >').appendTo(li);							
+							$('<span style="display: inline-block;margin-left: 30px;width: 246px;" class="name">'+ obj.name +'</span>').appendTo(li);
+							$('<span style="width: 50px;display: inline-block;text-align: center;" class="price">'+obj.price +'</span>').appendTo(li);
+							$('<input class="reduce" type="button" value="-" style="width: 20px;" />').appendTo(li);
+							$('<input class="num" type="text" value="'+ obj.num +'" />').appendTo(li);
+							$('<input class="add" type="button" value="+"style="width: 20px;" />').appendTo(li);
+							$('<a class="mon">' + (obj.num * obj.price) + '<a/>').appendTo(li);
+							$('<a class="del" href="javascript:;">删除</a>').appendTo(li);							
+							//计算总价
+							sum = sum + obj.num;
+							if (obj.checked) {
+								totalPrice += obj.price * obj.num;
+							}
+						}
+						
+						//显示总价
+						$("#total").html(totalPrice);
+						$("#bot4").find("a").eq(1).html(sum);
+					}
+					else {
+						console.log("购物车还没有商品， 请先购买！");
+					}
+				}
+				
+				//+
+				$("#list").on("click", ".add", function(){
+					var index = $(this).index("#list .add");
+					
+					//获取cookie并修改
+					var arr = JSON.parse($.cookie("cart"));
+					arr[index].num++;
+					
+					//覆盖原来的cookie
+					$.cookie("cart", JSON.stringify(arr), {expires:30, path:"/"});
+					
+					//刷新节点数据
+					refresh();
+				})
+				
+				//-
+				$("#list").on("click", ".reduce", function(){
+					var index = $(this).index("#list .reduce");
+					
+					//获取cookie并修改
+					var arr = JSON.parse($.cookie("cart"));
+					arr[index].num--;
+					if (arr[index].num < 1) {
+						arr[index].num = 1;
+					}
+					
+					//覆盖原来的cookie
+					$.cookie("cart", JSON.stringify(arr), {expires:30, path:"/"});
+					
+					//刷新节点数据
+					refresh();
+				})
+				
+				
+				//删除
+				$("#list").on("click", ".del", function(){
+					var index = $(this).index("#list .del");
+					
+					//获取cookie并修改
+					var arr = JSON.parse($.cookie("cart"));
+					arr.splice(index, 1); //删除数组arr的第index个
+					
+					//覆盖原来的cookie
+					$.cookie("cart", JSON.stringify(arr), {expires:30, path:"/"});
+					
+					isAllSelect();
+					
+					//刷新节点数据
+					refresh();
+				})
+				
+				
+				//勾选
+				$("#list").on("click", ".ckbox", function(){
+					var index = $(this).index("#list .ckbox");
+					
+					//获取cookie并修改
+					var arr = JSON.parse($.cookie("cart"));
+					arr[index].checked = !arr[index].checked;
+					
+					//覆盖原来的cookie
+					$.cookie("cart", JSON.stringify(arr), {expires:30, path:"/"});
+					
+					//判断是否全选了
+					isAllSelect();
+					
+					//刷新节点数据
+					refresh();
+				})
+				
+				//判断是否全部勾选了
+				isAllSelect();
+				function isAllSelect(){
+					
+					//判断是否为undefined
+					var arr = $.cookie("cart");
+					if (!arr) {
+						return;
+					}
+					
+					var arr = JSON.parse($.cookie("cart"));
+					
+					var sum = 0;
+					for (var i=0; i<arr.length; i++) {
+						sum += arr[i].checked;
+					}
+					
+					//全选了
+					if (arr.length!=0 && sum==arr.length) {
+						$("#allSelect").prop("checked", true);
+					}
+					//未全选
+					else {
+						$("#allSelect").prop("checked", false);
+					}
+				}
+				
+				//全选
+				$("#allSelect").click(function(){
+					//判断是否为undefined
+					var arr = $.cookie("cart");
+					if (!arr) {
+						return;
+					}
+					
+					var arr = JSON.parse($.cookie("cart"));
+					for (var i=0; i<arr.length; i++) {
+						//全选
+						if ($(this).prop("checked")){
+							arr[i].checked = true;
+						}
+						//全不选
+						else {
+							arr[i].checked = false;
+						}
+					}
+					$.cookie("cart", JSON.stringify(arr), {expires:30, path:"/"});
+					
+					//刷新
+					refresh();
+				})
+				
+				//删除选中
+				$("#delSelect").click(function(){
+					
+					//获取cookie并修改
+					var arr = JSON.parse($.cookie("cart"));
+					
+					//将未选中的商品添加到新数组newArr中，再将newArr保存到cookie
+					var newArr = [];
+					for (var i=0; i<arr.length; i++) {
+						if (!arr[i].checked) {
+							newArr.push(arr[i]);
+						}
+					}
+				    $("#acc").css("display","block")
+					//覆盖原来的cookie
+					$.cookie("cart", JSON.stringify(newArr), {expires:30, path:"/"});
+					
+					isAllSelect();
+					
+					//刷新节点数据
+					refresh();
+				})
+				
+				
+				
+				
+				
+				var arrx = [];
+				
+				//先获取数据并创建节点，显示数据
+				$.get("JSON/sp.json", function(data){
+					console.log(data);
+					arrx = data;
+					//遍历json中的所有商品数据，并用节点显示
+					for (var i=0; i<arrx.length; i++) {
+						var obj = arrx[i];
+						//创建li节点			
+					}
+					
+				})
+				
+				//点击商品
+				$(".img").click(function(){
+					
+					var index = $(this).id;
+					//console.log(index);
+					
+					var obj = arrx[index]; //所点击的商品
+					
+					
+					//将当前点击的商品数据加入购物车（cookie）
+	
+					
+					//判断原来的购物车中是否有相同商品
+					
+					
+					//将arr2添加到cookie中
+					location.href = "shopwhat.html?id=" + obj.id;
+				})
+			})
+		</script>
+		
+	</head>
+	<body>
+		<!--
+        	作者：1156671572@qq.com
+        	时间：2017-10-19
+        	描述：购物车重做
+        -->
+        <div id="top">
+        	<div class="main">
+        		<ul id="ul1">
+        			<li id="top1"><a>百联集团666</a></li>
+        			<li id="top2"><a href="">网站导航</a></li>
+        			<li id="top3"><a href="">消息</a></li>
+        		</ul>
+        		<ul id="ul2">
+        			<li><a href="html/login.html">登录</a><a href="html/register.html">注册</a></li>
+        			<li><a href="">我的订单</a></li>
+        			<li><a href="">我的百联</a></li>
+        			<li><a href="">充值缴费</a></li>
+        			<li><a href="">客户服务</a></li>
+        			<li><a href="">掌上百联</a></li>
+        			<li><a href="car.html">购物车</a></li>
+        		</ul>
+        	</div>
+        </div>
+        
+       	<div id="qi">
+       		<div class="main">
+       			<div id="hang">
+       				<div id="hangimg">
+       					<a href="index.html"><img src="images/banner.jpg" /></a>
+       				</div>
+       				<div id="hanga">
+       					<a>购物车</a>
+       				</div>
+       			</div>
+       			<div id="fang">
+       				<a>现在</a>
+       				<a href="html/login.html">登录,</a>
+       				<a>您购物车中的商品将会永久保存</a>
+       			</div>
+       		</div>
+       	</div> 
+       	
+       	<div class="main">
+	       	<div id="in">
+	       		<div id="in1">
+	       			<a>全部商品</a>
+	       			<a></a> 
+	       			<!--这里是统计商品数量-->
+	       		</div>
+	       		<div id="in2">
+	       			<a>配送至</a>
+	       			<div>
+	       				<!--这里是地点jq插件-->
+	       			</div>
+	       		</div>
+	       	</div>
+	       	
+	       	<div id="ip">
+	       		<div id="ip1">
+	       			<input type="checkbox" checked="checked" id="allSelect" />
+	       			<a>全选</a>
+	       		</div>
+	       		<div id="ip2">
+	       			<a>商品信息</a>
+	       		</div>
+	       		<div id="ip3">
+	       			<a>单价(元)</a>
+	       		</div>
+	       		<div id="ip4">
+	       			<a>件数</a>
+	       		</div>
+	       		<div id="ip5">
+	       			<a>金额(元)</a>
+	       		</div>
+	       		<div id="ip6">
+	       			<a>操作</a>
+	       		</div>
+	       	</div>
+	       	
+	       	<div id="ib">
+	       		<div id="ibl">
+	       			<input type="checkbox" checked="checked"  />	
+	       			<a>i百联自营</a>
+	       		</div>
+	       	</div>
+	       	
+	       	<!--动态创建节点-->
+	       	<div>
+	       		<ul id="list">
+	       			
+				</ul>	       		
+	       	</div>
+	       	
+	       	<div id="bot">
+	       		<div id="bot1">
+	       			<input type="checkbox" checked="checked" id="allSelect" />
+	       			<a>全选</a>
+	       		</div>
+	       		<div id="bot2">
+	       			<a id="delSelect">删除</a>
+	       		</div>
+	       		<div id="bot3">
+	       			<a>清楚失效商品</a>
+	       			<a>移入收藏夹</a>
+	       		</div>
+	       		<div id="bot4">
+	       			<a>已选择</a>
+	       			<a>0</a>
+	       			<a>件商品</a>
+	       		</div>
+	       		<div id="bot5">
+	       			<a>商品金额(不含运费)：</a>
+	       		</div>
+	       		<div id="bot6">
+	       			<p id="total">
+	       				<!--总价-->
+	       			</p>
+	       			<a>优惠</a>
+	       			<a>-￥0.00</a>
+	       		</div>
+	       		<div id="bot7">去结算</div>
+	       	</div>
+        </div>
+        <div id="bt">
+        	<div class="main">
+        		<dl>
+        			<dt>新手入门</dt>
+	        			<dd><a href="">购物流程</a></dd>
+	        			<dd><a href="">会员介绍</a></dd>
+	        			<dd><a href="">常见问题</a></dd>
+	        			<dd><a href="">发票说明</a></dd>
+	        			<dd><a href="">联系客服</a></dd>
+        		</dl>
+        		<dl>
+        			<dt>配送服务</dt>
+	        			<dd><a href="">配送范围及运费</a></dd>
+	        			<dd><a href="">配送进度查询</a></dd>
+	        			<dd><a href="">自提服务</a></dd>
+	        			<dd><a href="">商品验货与签收</a></dd>         	
+        		</dl>
+        		<dl>
+        			<dt>支付方式</dt>
+        				<dd><a href="">货到付款</a></dd>
+        				<dd><a href="">在线支付</a></dd>
+        		</dl>
+        		<dl>
+        			<dt>售后服务</dt>
+        				<dd><a href="">退换货政策</a></dd>
+        				<dd><a href="">退换货流程</a></dd>
+        				<dd><a href="">退款说明</a></dd>
+        		</dl>
+       			<dl id="dl5">
+       				<dt>商家支持</dt>
+       					<dd><a href="">商家入驻</a></dd>
+       					<dd><a href="">商家规则</a></dd>
+       					<dd><a href="">商家常见问题</a></dd>
+       			</dl>	
+        	</div>
+        </div>
+        <!--最底部-->
+        	<div class="main">
+        		<div style="margin: 10px auto;width: 255px;">
+        			<a href="">关于我们</a>
+        			<a href="">联系我们</a>
+        			<a href="">加盟合作</a>
+        			<a href="">诚征英才</a>
+        			<a href="">友情链接</a>
+        		</div>
+        		<div style="margin:10px auto;width: 625px;">
+        			百联集团有限公司旗下 上海百联全渠道电子商务有限公司版权所有 | 客服电话：400-900-8800 | 沪ICP备15028847号
+        		</div>
+        		<div style="width: 348px;margin: 10px auto;">
+        			<a href="">互联网药品信息服务资质证书编号：沪-（非营业性）-2016-0044</a>
+        		</div>
+        		<div style="margin: 10px auto;width: 342px;">
+        			<a href="">沪公网安备 31010102002366号</a>
+        			<a href="">网购大家评</a>
+        			<a href="">上海工商</a>
+        			<a href="">经营执照</a>
+        		</div>
+        	</div>
+        
+        
+        
+        
+        
+	</body>
+</html>

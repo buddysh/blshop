@@ -1,0 +1,3521 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head> 
+		<meta charset="UTF-8">
+		<title>百联集团旗下全渠道电商平台</title>
+		<link type="text/css" rel="stylesheet" href="{% static 'css/reset.css' %}" />
+		<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}" />
+		<link type="text/css" rel="stylesheet" href="{% static 'iconfont/iconfont.css' %}" />
+        <link type="text/css" rel="stylesheet" href="{% static 'css/swiper.min.css' %}" />
+{#		<script src="{% static 'js/move.js' %}"></script>#}
+		<script src="{% static 'js/jquery-1.12.3.js' %}"></script>
+		<script src="{% static 'js/jquery.cookie.js' %}"></script>
+        <script src="{% static 'js/swiper.min.js' %}"></script>
+        <script src="{% static 'js/myblshop.js' %}"></script>
+{#		<script src="{% static 'js/style.js' %}"></script>#}
+	</head>
+
+    <body>
+
+		<div class="top" id="top">
+			<div class="main">
+				<ul class="left-top">
+					<li><img src="{% static 'images/top1.jpg' %}"></li>
+					<li>百联集团旗下全渠道电商平台</li>
+					<li><a href="" target="_blank">网站导航</a></li>
+					<li><a href="" target="_blank">消息</a></li>
+				</ul>
+				<ul class="right-top">
+					<li><a href="{% url 'app:login' %}" class="iconfont" target="_self">  请登录</a>&nbsp;&nbsp;
+                        <a href="{% url 'app:register' %}" target="_self">注册</a></li>
+					<li><a href="car.html" target="_blank">我的订单</a></li>
+					<li><a href="" target="_blank">我的百联</a></li>
+					<li><a href="" target="_blank">充值缴费</a></li>
+					<li><a href="" target="_blank">客户服务</a></li>
+					<li><a href="" target="_blank">掌上百联</a></li>
+					<li><a href="car.html" target="_blank">购物车</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="back">
+			<span></span>
+		</div>
+		<div class="main" style="position: relative;margin-top: 20px ;">
+			<div class="logomian">
+				<a href="index.html" target="_blank"><img src="{% static 'images/banner.jpg' %}"></a>
+
+				<form>
+					<input type="search" placeholder="iphone8" style="width: 477px; height: 35px; border: 0px; padding: 0px 10px;"><input type="submit" value="搜索" style="cursor: pointer; width: 83px; height: 36px; background: rgb(192, 17, 51); border: 0px;">
+				</form>
+				<input type="button" value="安付宝OK卡专区  >" class="form-inpt" style="width: 121px; height: 40px; background: rgb(242, 242, 242); border: 1px solid rgb(226, 226, 226); border-radius: 2px;">
+				<br>
+				<ul class="inpt-ul">
+					<li><a target="_blank">纸巾</a></li>
+					<li><a target="_blank">洗发水</a></li>
+					<li><a target="_blank">咖啡</a></li>
+					<li><a target="_blank">奶粉</a></li>
+					<li><a target="_blank">iphone</a></li>
+					<li><a target="_blank">苹果</a></li>
+					<li><a target="_blank">牙膏</a></li>
+					<li><a target="_blank">耳机</a></li>
+					<li><a target="_blank">牙刷</a></li>
+					<li style="border: 0;"><a target="_blank">雅诗兰黛</a></li>
+				</ul>
+			</div>
+			<div class="banner-main">
+				<dl class="icon">
+					<dt>所有商品分类</dt>
+					<dd class="iconfont dd"> <a href="http://global.bl.com/?bl_ad=P668899_-_9999062360_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">百联进口 全球购</a>
+						<div class="bannerx">
+							<div class="box1">
+								<ul>
+									<h5>进口美妆护肤</h5>
+										<a href="" target="_blank">面膜</a>
+									 	<a href="" target="_blank">乳液/面霜</a>
+									 	<a href="" target="_blank">化妆水</a>
+										<a href="" target="_blank">护肤套装</a>
+										<a href="" target="_blank">眼部护理</a>
+										<a href="" target="_blank">面部精华</a>
+										<a href="" target="_blank">防晒</a>
+										<a href="" target="_blank">美容仪</a>
+										<a href="" target="_blank">洁面</a>
+										<a href="" target="_blank">卸妆</a>
+										<a href="" target="_blank">彩妆</a>
+										<a href="" target="_blank">香水</a>
+										<a href="" target="_blank">男士护肤</a>
+								</ul>
+								<ul>
+									<h5>进口个人护理</h5>
+										<a href="" target="_blank">洗发水</a>
+										<a href="" target="_blank">护发素</a>
+										<a href="" target="_blank">沐浴露</a>
+										<a href="" target="_blank">漱口水</a>
+										<a href="" target="_blank">牙膏</a>
+										<a href="" target="_blank">牙刷</a>
+										<a href="" target="_blank">身体乳</a>
+										<a href="" target="_blank">护手霜</a>
+										<a href="" target="_blank">身体护理</a>
+										<a href="" target="_blank">卫生巾</a>
+								</ul>
+								<ul>
+									<h5>进口美食/营养保健</h5>
+										<a href="" target="_blank">坚果</a>
+										<a href="" target="_blank">果干</a>
+										<a href="" target="_blank">膨化</a>
+										<a href="" target="_blank">糖果</a>
+										<a href="" target="_blank">海苔</a>
+										<a href="" target="_blank">曲奇</a>
+										<a href="" target="_blank">饼干</a>
+										<a href="" target="_blank">威化</a>
+										<a href="" target="_blank">橄榄油</a>
+										<a href="" target="_blank">泡面</a>
+										<a href="" target="_blank">蜂蜜</a>
+										<a href="" target="_blank">维生素</a>
+										<a href="" target="_blank">葡萄籽</a>
+										<a href="" target="_blank">蔓越莓</a>
+								</ul>
+								<ul>
+									<h5>进口牛奶/冲饮/酒水</h5>
+										<a href="" target="_blank">牛奶</a>
+										<a href="" target="_blank">全脂</a>
+										<a href="" target="_blank">低脂</a>
+										<a href="" target="_blank">豆奶</a>
+										<a href="" target="_blank">成人奶粉</a>
+										<a href="" target="_blank">营养谷物</a>
+										<a href="" target="_blank">咖啡</a>
+										<a href="" target="_blank">袋泡茶</a>
+										<a href="" target="_blank">水</a>
+										<a href="" target="_blank">碳酸</a>
+										<a href="" target="_blank">葡萄酒</a>
+										<a href="" target="_blank">啤酒</a>
+										<a href="" target="_blank">洋酒</a>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>进口母婴</h5>
+										<a href="" target="_blank">奶粉</a>
+										<a href="" target="_blank">辅食</a>
+										<a href="" target="_blank">纸尿裤</a>
+										<a href="" target="_blank">奶瓶奶嘴</a>
+										<a href="" target="_blank">水杯餐具</a>
+										<a href="" target="_blank">洗发沐浴</a>
+										<a href="" target="_blank">宝宝护肤</a>
+										<a href="" target="_blank">口腔清洁</a>
+										<a href="" target="_blank">手推车</a>
+										<a href="" target="_blank">安全座椅</a>
+										<a href="" target="_blank">玩具</a>
+								</ul>
+								<ul>
+									<h5>进口品质家居</h5>
+										<a href="" target="_blank">吸尘器</a>
+										<a href="" target="_blank">咖啡机</a>
+										<a href="" target="_blank">榨汁机</a>
+										<a href="" target="_blank">滤水壶</a>
+										<a href="" target="_blank">锅具</a>
+										<a href="" target="_blank">刀具</a>
+										<a href="" target="_blank">乳胶枕</a>
+								</ul>
+								<ul>
+									<h5>进口鞋靴箱包</h5>
+										<a href="" target="_blank">GUCCI</a>
+										<a href="" target="_blank">kipling</a>
+										<a href="" target="_blank">MK</a>
+										<a href="" target="_blank">MCM</a>
+										<a href="" target="_blank">KENZO</a>
+										<a href="" target="_blank">FURLA</a>
+										<a href="" target="_blank">剑桥包</a>
+										<a href="" target="_blank">ANELLO</a>
+								</ul>
+								<ul>
+									<h5>进口饰品/手表</h5>
+										<a href="" target="_blank">雷朋</a>
+										<a href="" target="_blank">apm</a>
+										<a href="" target="_blank">潘多拉</a>
+								</ul>
+							</div>
+
+							<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+								<li><a href="" target="_blank"><img src="{% static 'images/ha/11f.jpg' %}"></a></li>
+								<li><a href="" target="_blank"><img src="{% static 'images/ha/12f.jpg' %}"></a></li>
+							</ul>
+						<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					</dd>
+					<dd class="iconfont dd"> <a href="http://search.bl.com/c-a102768.html?bl_ad=P668899_-_9999060472_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">生鲜食品</a>
+						<div class="bannerx">
+							<div class="box1">
+								<ul>
+									<h5>新鲜水果</h5>
+									<a href="" target="_blank">进口水果</a>
+									<a href="" target="_blank">国产水果</a>
+									<a href="" target="_blank">苹果</a>
+									<a href="" target="_blank">芒果</a>
+									<a href="" target="_blank">猕猴桃</a>
+									<a href="" target="_blank">杨桃</a>
+									<a href="" target="_blank">柑橘橙</a>
+									<a href="" target="_blank">菠萝/凤梨</a>
+									<a href="" target="_blank">山竹</a>
+									<a href="" target="_blank">莲雾</a>
+									<a href="" target="_blank">牛油果</a>
+									<a href="" target="_blank">火龙果</a>
+									<a href="" target="_blank">樱桃/车厘子</a>
+									<a href="" target="_blank">葡萄提子</a>
+									<a href="" target="_blank">黑布林</a>
+									<a href="" target="_blank">西柚</a>
+								</ul>
+								<ul>
+									<h5>精选肉类</h5>
+									<a href="" target="_blank">牛肉</a>
+									<a href="" target="_blank">猪肉</a>
+									<a href="" target="_blank">冷冻猪肉</a>
+									<a href="" target="_blank">冰鲜猪肉</a>
+									<a href="" target="_blank">羊肉</a>
+									<a href="" target="_blank">牛排</a>
+									<a href="" target="_blank">牛腱</a>
+									<a href="" target="_blank">牛腩</a>
+									<a href="" target="_blank">牛尾</a>
+									<a href="" target="_blank">火腿</a>
+								</ul>
+								<ul>
+									<h5>海鲜水产</h5>
+									<a href="" target="_blank">鱼类</a>
+									<a href="" target="_blank">大闸蟹</a>
+									<a href="" target="_blank">三文鱼</a>
+									<a href="" target="_blank">鲳鱼</a>
+									<a href="" target="_blank">虾类</a>
+									<a href="" target="_blank">虾仁</a>
+									<a href="" target="_blank">蟹类</a>
+									<a href="" target="_blank">帝王蟹</a>
+									<a href="" target="_blank">海参</a>
+									<a href="" target="_blank">贝类</a>
+									<a href="" target="_blank">扇贝</a>
+								</ul>
+								<ul>
+									<h5>禽类/蛋类</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">鸡肉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鸡腿</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鸡翅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鸭肉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鸡蛋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鸭蛋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">咸鸭蛋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">松花皮蛋</a></li>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>速冻食品</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">水饺</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">汤圆</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">混沌</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">包子</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">馒头</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">面条</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鱼丸</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">贡丸</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">速冻蔬菜</a></li>
+								</ul>
+								<ul>
+									<h5>新鲜蔬菜/蔬菜随心打</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">根茎类</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">菌菇类</a></li>
+								</ul>
+								<ul>
+									<h5>烘焙乳品</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">低温鲜奶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">新鲜酸奶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">冰淇淋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">新鲜蛋糕</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">低温奶酪</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">黄油</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">奶油</a></li>
+								</ul>
+								<ul>
+									<h5>时令特色</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">大闸蟹</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">乔西牛奶</a></li>
+								</ul>
+							</div>
+						<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/21f.jpg' %}"></a></li>
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/22f.jpg' %}"></a></li>
+						</ul>
+					<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					</dd>
+					<dd class="iconfont dd"> <a href="http://search.bl.com/c-a102660.html?bl_ad=P668899_-_9999060421_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">食品粮油</a>
+						<a href="http://search.bl.com/c-a212822.html?bl_ad=P668899_-_9999060421_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank"> 酒水冲饮</a>
+						<div class="bannerx">
+							<div class="box1">
+								<ul>
+									<h5>休闲食品</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">膨化食品</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">米饼</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">薯片</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">坚果</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">碧根果</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">杏仁/巴旦木</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">蜜饯果干</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">肉干肉脯</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">豆干</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鸭脖</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">海味零食</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">海苔</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">糖果</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">巧克力</a></li>
+								</ul>
+								<ul>
+									<h5>饼干糕点</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">曲奇</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">饼干</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">杂粮饼干</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">中式糕点</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">沙琪玛</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">凤梨酥</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">肉松饼</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">西式糕点</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">面包</a></li>
+								</ul>
+								<ul>
+									<h5>粮油干货</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">大米</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">食用油</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">橄榄油</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">菜籽油</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">面粉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">淀粉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">杂粮</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">挂面</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">意面</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">粉丝</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">香菇</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">红枣</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">木耳</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">枸杞</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">银耳</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">桂圆干</a></li>
+								</ul>
+								<ul>
+									<h5>素食调味</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">方便面</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">进口泡面</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">肉罐头</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">水产罐头</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">八宝粥</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">盐</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">糖</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">醋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">酱油</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">料酒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">香油</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鸡精</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">调味料</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">调味酱</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">酱菜</a></li>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>牛奶乳品</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">纯牛奶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">进口牛奶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">酸奶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">豆奶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">调味奶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">成人奶粉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">纽仕兰</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">安佳</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">伊利</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">德运</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">光明</a></li>
+								</ul>
+								<ul>
+									<h5>中外名酒</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">白酒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">红葡萄酒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">白葡萄酒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洋酒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">起泡酒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">啤酒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">黄酒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">保健酒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鸡尾酒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">五粮液</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洋河</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">茅台</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">泸州老窖</a></li>
+								</ul>
+								<ul>
+									<h5>饮料</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">饮用水</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">果汁</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">碳酸饮料</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">茶饮料</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">功能饮料</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">即饮咖啡</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">植物蛋白饮料</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">含乳饮料</a></li>
+								</ul>
+								<ul>
+									<h5>咖啡/茶叶/冲调</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">速溶咖啡</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">咖啡豆</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">咖啡粉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">滤挂咖啡</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">绿茶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">菊花茶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">红茶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">花草茶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">袋泡茶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">普洱茶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">麦片</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">奶茶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">柚子茶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">蜂蜜</a></li>
+								</ul>
+							</div>
+						<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/31f.jpg' %}"></a></li>
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/32f.jpg' %}"></a></li>
+						</ul>
+					<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					<!--
+                    	作者：offline
+                    	时间：2017-10-12
+                    	描述：第三栏 休闲食品
+                    -->
+					</dd>
+					<dd class="iconfont dd"> <a href="http://search.bl.com/c-a103443.html?bl_ad=P668899_-_9999060376_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">美容护理</a>
+						<div class="bannerx">
+							<div class="box1">
+								<ul>
+									<h5>面部护肤</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">乳液面霜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">护肤套装</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洁面</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">面膜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">精华</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">爽肤水</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">面部喷雾</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">眼霜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">润唇膏</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">卸妆</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">防晒</a></li>
+								</ul>
+								<ul>
+									<h5>美发护肤</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">洗发水</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">进口洗发水</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">护发素</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">发膜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洗护套装</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">头发造型</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">弹力素</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">发泥发蜡</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">染发</a></li>
+								</ul>
+								<ul>
+									<h5>女性护理</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">卫生巾</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">日用</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">夜用</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">安心裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">组合套装</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">卫生护垫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">私处洗液</a></li>
+								</ul>
+								<ul>
+									<h5>男士护肤</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">洁面</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">爽肤水</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">乳液面霜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">精华</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洗发水</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">沐浴露</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">剃须刀</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">剃须泡沫</a></li>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>身体护理/沐浴清洁</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">身体乳</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洗手液</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">香皂</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">泡澡浴盐</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">沐浴露</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">护手霜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">足部护理</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">身体磨砂</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">美体瘦身</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">精油芳疗</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">脱毛</a></li>
+								</ul>
+								<ul>
+									<h5>彩妆</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">BB霜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">隔离</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">粉底</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">粉饼</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">遮瑕</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">散粉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">口红</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">睫毛膏</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">眼影</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">眼线</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">眉线笔</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">香水</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">指甲油</a></li>
+								</ul>
+								<ul>
+									<h5>美容工具/洗护用具</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">化妆棉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">美发梳</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">美甲工具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">眼眉工具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">面部工具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">浴球/浴花</a></li>
+								</ul>
+								<ul>
+									<h5>口腔护理</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">牙膏</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">进口牙膏</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">漱口水</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">牙刷</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电动牙刷</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">口气清新剂</a></li>
+								</ul>
+							</div>
+						<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/41f.jpg' %}"></a></li>
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/42f.jpg' %}"></a></li>
+						</ul>
+					<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					<!--
+                    	作者：offline
+                    	时间：2017-10-12
+                    	描述：面部护理
+                    -->
+					</dd>
+					<dd class="iconfont dd"> <a href="http://search.bl.com/c-a102435.html?bl_ad=P668899_-_9999059882_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">母婴 玩具</a>
+						<div class="bannerx">
+							<div class="box1">
+								<ul>
+									<h5>奶粉/辅食</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">奶粉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">一段</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">二段</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">三段</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">四段</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">孕妈奶粉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">特殊配方</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">有机奶粉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">米粉粥</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">营养品</a></li>
+								</ul>
+								<ul>
+									<h5>尿裤/湿巾</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">纸尿裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">NB</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">S</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">M</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">L</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">XL</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">拉拉裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">婴儿湿巾</a></li>
+								</ul>
+								<ul>
+									<h5>宝宝洗护清洁</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">洗发洗护</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">沐浴露</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">婴儿护肤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">牙膏/牙刷</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">驱蚊/防痱</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洗衣液</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洗衣皂</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">奶瓶清洁</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洗手液</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">坐便器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">日常护理</a></li>
+								</ul>
+								<ul>
+									<h5>玩具</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">早教益智</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">彩泥手工</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">婴幼儿玩具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电动玩具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">积木拼图</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">毛绒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">娃娃</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">动漫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">休闲玩具</a></li>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>婴童车床/婴幼家纺</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">安全座椅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">婴儿推车</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">婴儿背带</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">婴儿床</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">餐椅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">自行车</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">儿童枕</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">抱枕/抱毯</a></li>
+								</ul>
+								<ul>
+									<h5>哺育喂养用品</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">奶瓶/奶嘴</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">吸奶器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">奶瓶消毒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">暖奶器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">储奶袋/瓶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">安抚奶嘴</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">牙胶咬咬乐</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">奶瓶刷/奶嘴刷</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">儿童餐具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">吸管杯</a></li>
+								</ul>
+								<ul>
+									<h5>童装/童鞋/婴儿服饰</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">T恤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">内衣裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">运动裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">童套装</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">连衣裙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">外套/夹克</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">休闲裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">牛仔裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">睡衣</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">婴儿鞋</a></li>
+								</ul>
+								<ul>
+									<h5>孕妈专区</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">防溢乳垫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">孕妈洗护</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">产后修复</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">文胸/内裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">防辐射服</a></li>
+								</ul>
+							</div>
+						<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/51f.jpg' %}"></a></li>
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/52f.jpg' %}"></a></li>
+						</ul>
+					<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					</dd>
+					<dd class="iconfont dd"> <a href="http://search.bl.com/c-a102537.html?bl_ad=P668899_-_9999061110_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">餐厨用具 家具家装</a>
+						<div class="bannerx">
+							<div class="box1">
+								<ul>
+									<h5>厨具锅具</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">套装锅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">炒锅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">平底锅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">汤锅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">煲/砂锅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">蒸锅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">压力锅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">烧水壶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">刀具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">砧板</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">铲勺</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">收纳</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">置物架</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">厨房工具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">烘焙</a></li>
+								</ul>
+								<ul>
+									<h5>收纳洗晒</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">收纳箱</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">收纳柜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">收纳袋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">压缩袋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">衣架</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">晾晒衣架</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">杂物收纳</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洗晒用具</a></li>
+								</ul>
+								<ul>
+									<h5>居家日用</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">雨伞雨具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">粘钩挂钩</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">口罩</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">纸巾套/盒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">防潮垫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">保暖贴</a></li>
+								</ul>
+								<ul>
+									<h5>家装建材/家具</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">浴霸</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">马桶盖</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">厨房装修</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">卫浴装修</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">开关插座</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">五金工具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">灯具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">床垫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">床</a></li>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>餐具/水具</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">水杯</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">保鲜盒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">滤水盒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">碗碟</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">餐具套装</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">果盘托盘</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">刀叉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">筷子</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">酒具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">保温杯</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">咖啡具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">茶具</a></li>
+								</ul>
+								<ul>
+									<h5>床上用品</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">床品套件</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">床垫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">被子</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">秋冬被</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">枕头</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">记忆乳胶枕</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">毛毯</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">床单被罩</a></li>
+								</ul>
+								<ul>
+									<h5>家纺布艺</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">毛巾</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">毛巾礼盒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">浴巾浴袍</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">家居拖鞋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">靠垫坐垫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">地毯地垫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">围裙袖套</a></li>
+								</ul>
+								<ul>
+									<h5>宠物用品</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">猫粮</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">狗粮</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">宠物用品</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">宠物清洁</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">花瓶</a></li>
+								</ul>
+							</div>
+						<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/61f.jpg' %}"></a></li>
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/62f.jpg' %}"></a></li>
+						</ul>
+					<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					</dd>
+					<dd class="iconfont dd"> <a href="http://search.bl.com/c-a102561.html?bl_ad=P668899_-_9999059635_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">女装 男装</a>
+						<div class="bannerx">
+							<div class="box1">
+								<ul>
+									<h5>衣物清洁护理</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">洗衣液凝珠</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洗衣粉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">衣物除菌</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">柔顺剂</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洗衣皂</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">衣领净</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">漂白</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">彩漂</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">天然皂粉</a></li>
+								</ul>
+								<ul>
+									<h5>家庭清洁</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">防潮防蛀</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">驱蚊驱虫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">地板清洁</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">玻璃清洁</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">冰箱去味</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">除甲醛</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">空气清新</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">家电清洁</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鞋油鞋刷</a></li>
+								</ul>
+								<ul>
+									<h5>清洁工具</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">拖把</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">旋转拖把</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">扫把</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">抹布</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">百洁布</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">钢丝球</a></li>
+								</ul>
+								<ul>
+									<h5>卫浴用品</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">肥皂盒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">浴室防滑垫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">水桶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">脸盆</a></li>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>纸质品</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">抽纸</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">卷筒纸</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">手帕纸</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">餐巾纸</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">湿巾</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">平板卫生纸</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">厨房用纸</a></li>
+								</ul>
+								<ul>
+									<h5>厨卫清洁</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">洗洁精</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">消毒液</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">油污净</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洁厕剂</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">管道通</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">卫浴清洁剂</a></li>
+								</ul>
+								<ul>
+									<h5>一次性用品</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">保鲜膜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">垃圾袋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">保鲜袋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">塑料杯</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">纸杯</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">一次性餐具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">锡纸铝箔</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鞋套</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">牙签</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">手套</a></li>
+								</ul>
+								<ul>
+									<h5>品牌推荐</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">奥妙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">金纺</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">立白</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">蓝月亮</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">威猛先生</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">威露士</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">超能</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">汰渍</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">妙洁</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">白猫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">滴露</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">樱之花</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">茶花</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">妮飘</a></li>
+								</ul>
+							</div>
+						<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/71f.jpg' %}"></a></li>
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/72f.jpg' %}"></a></li>
+						</ul>
+					<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					</dd>
+					<dd class="iconfont dd"> <a href="http://search.bl.com/c-a102653.html?bl_ad=P668899_-_9999060010_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">鞋靴箱包</a>
+					<a href="http://search.bl.com/c-a102261.html?bl_ad=P668899_-_9999060010_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank"> 珠宝首饰</a>
+						<div class="bannerx">
+							<div class="box1">
+								<ul>
+									<h5>女士上装</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">长袖T恤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">衬衫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">针织衫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">外套</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">小西装</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">卫衣</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">风衣</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">毛呢大衣</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">羽绒服</a></li>
+								</ul>
+								<ul>
+									<h5>女士裤装</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">牛仔裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">休闲裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">小脚裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">短裤</a></li>
+								</ul>
+								<ul>
+									<h5>男士上装</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">T恤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">POLO衫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">外套</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">卫衣</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">针织衫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">长袖衬衫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">西装</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">短袖衬衫</a></li>
+								</ul>
+								<ul>
+									<h5>睡衣/家居服</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">男士家居服</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">女士家居服</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">秋冬家居服</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">睡裙</a></li>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>女士裙装/套装</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">连衣裙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">蕾丝连衣裙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">印花连衣裙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">棉麻连衣裙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">背心裙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">半身裙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">A字裙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">包臀裙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">百褶裙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">休闲套装</a></li>
+								</ul>
+								<ul>
+									<h5>文胸塑身</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">文胸</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">文胸套装</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">光面文胸</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">聚拢文胸</a></li>
+								</ul>
+								<ul>
+									<h5>男士裤装</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">休闲裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">牛仔裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">西装裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">短裤</a></li>
+								</ul>
+								<ul>
+									<h5>内衣/内裤/袜子</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">女士内裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">男士内裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">女袜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">男袜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">连裤袜/丝袜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">女士保暖内衣</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">男士保暖内衣</a></li>
+								</ul>
+							</div>
+						<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/81f.jpg' %}"></a></li>
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/82f.jpg' %}"></a></li>
+						</ul>
+					<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					</dd>
+					<dd class="iconfont dd"> <a href="http://search.bl.com/c-a101742.html?bl_ad=P668899_-_9999060060_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">手机数码 电脑办公</a>
+						<div class="bannerx">
+							<div class="box1">
+								<ul>
+									<h5>手机通讯</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">手机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">iPhone</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">华为</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">荣耀</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">三星</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">小米</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">魅族</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">OPPO</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">vivo</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">老人机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">大屏手机</a></li>
+								</ul>
+								<ul>
+									<h5>电脑整机/装机DIY</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">笔记本</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">游戏本</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">台式机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">一体机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">平板电脑</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">iPad</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">surface</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">显示器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">ThinkPad</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">硬盘</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">联想</a></li>
+								</ul>
+								<ul>
+									<h5>时尚影音/智能设备/电子教育</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">耳机耳麦</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">音响</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">音乐播放器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电玩游戏</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">智能手环</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">智能手表</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">智能眼镜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">无人机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">Kindle</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">录音笔</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电子教育</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">乐器</a></li>
+								</ul>
+								<ul>
+									<h5>办公设备/打印耗材</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">一体机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">打印机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">打印耗材</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">碎纸机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">装订机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">塑封机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">保险箱</a></li>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>手机/数码配件</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">移动电源</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电池</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">手机耳机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">蓝牙耳机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">贴膜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">数据线</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">车载配件</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">手机套</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">存储卡</a></li>
+								</ul>
+								<ul>
+									<h5>摄影摄像</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">数码相机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">单反</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">单电/微单</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">拍立得</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">镜头</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">运动摄像</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">闪光灯</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">相机包</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">三脚架</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">美颜神器</a></li>
+								</ul>
+								<ul>
+									<h5>电脑外设/网络设备</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">鼠标</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">键盘</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">键鼠套装</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鼠标垫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">配件</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">移动硬件</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">手写板</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">4G上网</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">路由器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">U盘</a></li>
+								</ul>
+								<ul>
+									<h5>办公用品/学生文具</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">笔</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">纸</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">本册便签</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">文件管理</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">文字修正</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">粘胶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">装订</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">计算器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">卷笔刀</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">书包</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">笔袋/笔盒</a></li>
+								</ul>
+							</div>
+						<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/91f.jpg' %}"></a></li>
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/92f.jpg' %}"></a></li>
+						</ul>
+					<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					</dd>
+					<dd class="iconfont dd"> <a href="http://search.bl.com/c-a102228.html?bl_ad=P668899_-_9999059985_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">家用电器</a>
+						<div class="bannerx">
+							<div class="box1">
+								<ul>
+									<h5>大家电</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">平板电视</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">空调</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">冰箱</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洗衣机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">冰吧/冷柜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">酒柜</a></li>
+								</ul>
+								<ul>
+									<h5>中式厨房小电</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">电饭煲</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">养生壶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电压力锅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电磁炉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电饼铛</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电水壶/热水壶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电炖锅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">多用途锅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电火锅</a></li>
+								</ul>
+								<ul>
+									<h5>生活电器</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">空气净化器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">智能扫地机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">净水设备</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">吸尘器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">加湿器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">除湿器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电熨斗</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">挂烫机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">干衣机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">饮水机</a></li>
+								</ul>
+								<ul>
+									<h5>个护健康</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">剃须刀</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电动牙刷</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电吹风</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">美发器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">美颜仪</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洁面仪</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">脱毛器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">人体秤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">足浴盆</a></li>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>厨房大家电</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">燃气热水器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">烟灶套装</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洗碗机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电热水器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">油烟机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">燃气灶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">消毒柜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">嵌入式电蒸烤箱</a></li>
+								</ul>
+								<ul>
+									<h5>西式厨房小电</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">微波炉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电烤箱</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">咖啡机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">面包机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">料理机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">榨汁机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">空气炸锅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">酸奶机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">打蛋器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">美颜煮蛋器神器</a></li>
+								</ul>
+								<ul>
+									<h5>两季电器</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">电风扇</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">无叶电风扇/塔扇</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">落地扇</a></li>
+								</ul>
+								<ul>
+									<h5>影音视听</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">网络机顶盒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">家庭影院</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">收/录音机</a></li>
+								</ul>
+							</div>
+						<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/101f.jpg' %}"></a></li>
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/102f.jpg' %}"></a></li>
+						</ul>
+					<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					</dd>
+					<dd class="iconfont dd"> <a href="http://search.bl.com/c-a102103.html?bl_ad=P668899_-_9999060575_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">运动户外 汽车用品</a>
+						<div class="bannerx">
+							<div class="box1">
+								<ul>
+									<h5>运动鞋服</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">T恤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">卫衣外套</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">套装</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">运动裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">跑步鞋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">篮球鞋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">板鞋/休闲鞋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">帆布鞋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">运动包</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">配件</a></li>
+								</ul>
+								<ul>
+									<h5>户外鞋服</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">冲锋衣裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">皮肤风衣</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">速干衣裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">抓绒衣裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">登山鞋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">配件</a></li>
+								</ul>
+								<ul>
+									<h5>户外装备</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">帐篷</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">望远镜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">野餐用品</a></li>
+								</ul>
+								<ul>
+									<h5>运动器材</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">自行车</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电动车</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">跑步机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">动感单车</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">椭圆机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">综合训练</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">哑铃</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">球类运动</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">排球</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">轮滑</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">游泳</a></li>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>汽车养护</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">机油</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">美孚</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">壳牌</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">嘉实多</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">添加剂</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">玻璃水</a></li>
+								</ul>
+								<ul>
+									<h5>车载电器</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">行车记录仪</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">车载净化器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">车载冰箱</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">车载电源</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">车载吸尘器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">充气泵</a></li>
+								</ul>
+								<ul>
+									<h5>汽车内饰/应急救援</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">座垫座套</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">脚垫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">后背箱垫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">方向盘套</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">头枕腰靠</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">车载香水</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">救援包</a></li>
+								</ul>
+								<ul>
+									<h5>美容清洗</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">洗车水枪</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">车蜡</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">擦车巾</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">清洁剂</a></li>
+								</ul>
+							</div>
+						<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/111f.jpg' %}"></a></li>
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/112f.jpg' %}"></a></li>
+						</ul>
+					<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					</dd>
+					<dd class="iconfont dd"> <a href="http://search.bl.com/c-a101989.html?bl_ad=P668899_-_9999060521_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">营养滋补 保健器械</a>
+						<div class="bannerx">
+							<div class="box1">
+								<ul>
+									<h5>秋季"平"补</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">石斛/枫斗</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">冬虫夏草</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">燕窝</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">阿胶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">蜂蜜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">三七</a></li>
+								</ul>
+								<ul>
+									<h5>进口保健品</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">麦卢卡蜂蜜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">维生素</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">葡萄籽</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">酵素</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">螺旋藻</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鱼油</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">维骨力</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">代餐蛋白粉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">辅酶Q10</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">月见草</a></li>
+								</ul>
+								<ul>
+									<h5>传统滋养</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">蜂蜜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">阿胶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">燕窝</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">人参</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">灵芝</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">三七</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">冬虫夏草</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鹿茸</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">药食同源</a></li>
+
+								</ul>
+								<ul>
+									<h5>基础营养</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">增强免疫力</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">减肥瘦身</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">美容养颜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">保护视力</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">骨骼关节养护</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">调节三高</a></li>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>动植物提取物</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">玛卡</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">番茄红素</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">葡萄籽</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">蔓越莓</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">奶蓟草</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">人参</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">珍珠粉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鱼油</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">螺旋藻</a></li>
+								</ul>
+								<ul>
+									<h5>维生素</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">维生素B</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">维生素C</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">维生素D</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">钙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">铁</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">复合维生素</a></li>
+								</ul>
+								<ul>
+									<h5>适用人群</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">男士保健</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">女士保养</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">呵护老人</a></li>
+								</ul>
+								<ul>
+									<h5>畅销品牌</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">神象</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">雷允上</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">同仁堂</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">Swisse</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">澳佳宝</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">Doppelherz双心</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">GNC</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">Schiff</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">Natrol</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">欧姆龙</a></li>
+								</ul>
+							</div>
+						<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/121f.jpg' %}"></a></li>
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/122f.jpg' %}"></a></li>
+						</ul>
+					<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					</dd>
+					<dd class="iconfont dd"> <a href="http://blk.bl.com/?bl_ad=P668899_-_9999109339_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">礼品卡 充值 图书</a>
+						<div class="bannerx">
+							<div class="box1">
+								<ul>
+									<h5>礼品卡/消费卡券</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">月饼券</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">大闸蟹券</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">新经典卡</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">生日卡</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">新婚卡</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">感恩卡</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">新生卡</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">乔迁卡</a></li>
+								</ul>
+								<ul>
+									<h5>生活图书</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">旅游</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">体育健身</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">饮食</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">休闲娱乐</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">居家</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">杂志</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">美容美体</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">孕产育儿</a></li>
+								</ul>
+								<ul>
+									<h5>文艺图书</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">小说</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">人物传记</a></li>
+								</ul>
+								<ul>
+									<h5>少儿图书</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">0-2岁</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">3-6岁</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">早教启蒙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">幼儿手工</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">智力开发</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">少儿英语</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">少儿文学</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">少儿技能</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">少儿百科</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">亲子读物</a></li>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>充值缴费</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">手机充值</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">流量充值</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">游戏充值</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">水费缴费</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电费缴费</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">燃气缴费</a></li>
+								</ul>
+								<ul>
+									<h5>教辅图书</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">新华字典</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">汉语词典</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">成语词典</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">牛津词典</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">小学教辅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">初中教辅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">高中教辅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">新概念</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">英语四级</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">英语六级</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">会计考试</a></li>
+								</ul>
+								<ul>
+									<h5>人文社科</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">中国史</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">世界史</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">文化</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">宗教</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">法律</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">政治军事</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">科普读物</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">医学</a></li>
+								</ul>
+							</div>
+						<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/131f.jpg' %}"></a></li>
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/132f.jpg' %}"></a></li>
+						</ul>
+					<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					</dd>
+				</dl>
+				<ul id="list2">
+					<li>
+						<a href="" target="_blank">
+							<img src="{% static 'images/ha/589616924.gif' %}">
+							<span class="ii"></span>
+						</a>
+					</li>
+					<li>
+						<a href="" target="_blank">
+							<img src="{% static 'images/ha/1347935582.gif' %}">
+							<span class"ii"=""></span>
+						</a>
+					</li>
+					<li><a href="" target="_blank">
+						<img src="{% static 'images/ha/g3.gif' %}">
+						<span class="ii"></span>
+						</a>
+					</li>
+					<li><a href="" target="_blank">
+						<img src="{% static 'images/ha/g4.gif' %}">
+						</a>
+					</li>
+					<li>
+						<a href="" target="_blank">
+							<img src="{% static 'images/ha/1075461344.gif' %}">
+							<span class="ii"></span>
+						</a>
+					</li>
+					<li>
+						<a href="" target="_blank">
+							<img src="{% static 'images/ha/41219145.gif' %}">
+							<span class="ii"></span>
+						</a>
+					</li>
+					<li>
+						<a href="" target="_blank">礼品卡
+							<span class="ii"></span>
+						</a>
+					</li>
+					<span class="icar"><img src="{% static 'images/ha/car.gif' %}"></span>
+				</ul>
+				<div id="banner" class="swiper-container swiper-container-horizontal">
+
+
+{#                    <div class="swiper-container swiper-container-horizontal">#}
+        <div class="swiper-wrapper" style="transform: translate3d(-984px, 0px, 0px); transition-duration: 0ms;">
+            <div class="swiper-slide" style="width: 462px; margin-right: 30px;"><img src="{% static 'images/banner1.jpg' %}" ></div>
+            <div class="swiper-slide" style="width: 462px; margin-right: 30px;"><img src="{% static 'images/banner2.jpg' %}" ></div>
+            <div class="swiper-slide" style="width: 462px; margin-right: 30px;"><img src="{% static 'images/banner3.jpg' %}" ></div>
+            <div class="swiper-slide" style="width: 462px; margin-right: 30px;"><img src="{% static 'images/banner4.jpg' %}" ></div>
+            <div class="swiper-slide" style="width: 462px; margin-right: 30px;"><img src="{% static 'images/banner5.jpg' %}" ></div>
+            <div class="swiper-slide" style="width: 462px; margin-right: 30px;"><img src="{% static 'images/banner6.jpg' %}" ></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets"><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet"></span></div>
+        <!-- Add Arrows -->
+{#        <div class="swiper-button-next"></div>#}
+{#        <div class="swiper-button-prev"></div>#}
+
+
+
+
+{#					<span id="span1">&lt;</span>#}
+{#					<span id="span2">&gt;</span>#}
+
+{#					<ul id="list" style="left:315px;top:360px;position:absolute;width:200px;">#}
+{#						<li></li>#}
+{#						<li></li>#}
+{#						<li></li>#}
+{#						<li></li>#}
+{#						<li></li>#}
+{#						<li></li>#}
+{#						<!--#}
+{#							轮播ul li#}
+{#						-->#}
+{#					</ul>#}
+					<div class="banner-right">
+						<div class="banner1">
+							<div class="banner1_a">
+								<a class="iconfont" target="_blank"> i百联快报</a>
+								<a class="iconfont" target="_blank">更多 </a>
+							</div>
+
+							<ul>
+								<li>[限时]&nbsp;&nbsp;为你甄选满300元减1...</li>
+								<li>[超值]&nbsp;&nbsp;DW手表满500减100</li>
+								<li>[速抢]&nbsp;&nbsp;囤面膜的好机会！</li>
+							</ul>
+						</div>
+						<div class="banner2">
+						</div>
+						<ul class="banner3">
+							<li>
+								<img src="{% static 'images/ha/life_ico1.png' %}">
+								<a target="_blank">充话费</a>
+							</li>
+							<li>
+								<img src="{% static 'images/ha/life_ico2.png' %}">
+								<a target="_blank">游戏</a>
+							</li>
+							<li>
+								<img src="{% static 'images/ha/life_ico7.png' %}">
+								<a target="_blank">固话</a>
+							</li>
+							<li>
+								<img src="{% static 'images/ha/life_ico13.png' %}">
+								<a target="_blank">水电煤</a>
+							</li>
+							<li>
+								<img src="{% static 'images/ha/life_ico15.png' %}">
+								<a target="_blank">车险</a>
+							</li>
+							<li>
+								<img src="{% static 'images/ha/life_ico14.png' %}">
+								<a target="_blank">游戏中心</a>
+							</li>
+							<li>
+								<img src="{% static 'images/ha/life_ico18.png' %}">
+								<a target="_blank">影娱生活</a>
+							</li>
+							<li>
+								<img src="{% static 'images/ha/life_ico11.png' %}">
+								<a target="_blank">充流量</a>
+							</li>
+							<li>
+								<img src="{% static 'images/ha/life_ico10.png' %}">
+								<a target="_blank">礼品卡</a>
+							</li>
+						</ul>
+						<div>
+							<img src="{% static 'images/ha/2.jpg' %}">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="shop main">
+				<img src="{% static 'images/ha/1.jpg' %}">
+				<ul id="shopx">
+					<!--<li>
+						<img src="images/ha/360.jpg" />
+						<a href="../百城e联/shopwhat.html">甘蒂牧场（MUH）全脂纯牛奶 1L 德国进口</a>
+						<p>￥7.9</p>
+						<p>参考价：￥13.0</p>
+					</li>
+					<li>
+						<img src="images/ha/361.jpg" />
+						<a href="../百城e联/shopwhat.html">甘蒂牧场（MUH）全脂纯牛奶 1L 德国进口</a>
+						<p>￥7.9</p>
+						<p>参考价：￥13.0</p>
+					</li>
+					<li>
+						<img src="images/ha/362.jpg" />
+						<a href="j../百城e联/shopwhat.html">甘蒂牧场（MUH）全脂纯牛奶 1L 德国进口</a>
+						<p>￥7.9</p>
+						<p>参考价：￥13.0</p>
+					</li>
+					<li>
+						<img src="images/ha/363.jpg" />
+						<a href="../百城e联/shopwhat.html">甘蒂牧场（MUH）全脂纯牛奶 1L 德国进口</a>
+						<p>￥7.9</p>
+						<p>参考价：￥13.0</p>
+					</li>
+					<li>
+						<img src="images/ha/364.jpg" />
+						<a href="../百城e联/shopwhat.html">甘蒂牧场（MUH）全脂纯牛奶 1L 德国进口</a>
+						<p>￥7.9</p>
+						<p>参考价：￥13.0</p>
+					</li>
+					<li style="border: 0 !important;">
+						<img src="images/ha/365.jpg" />
+						<a href="../百城e联/shopwhat.html">甘蒂牧场（MUH）全脂纯牛奶 1L 德国进口</a>
+						<p>￥7.9</p>
+						<p>参考价：￥13.0</p>
+					</li>-->
+				</ul>
+			</div>
+			<div class="bannershop">
+				<img src="{% static 'images/ha/a.jpg' %}" class="img2">
+				<ul class="ul1">
+					<li><img src="{% static 'images/ha/bao.jpg' %}"></li>
+					<li><img src="{% static 'images/ha/bao1.jpg' %}"></li>
+					<li><img src="{% static 'images/ha/bao2.jpg' %}"></li>
+				</ul>
+				<ul class="ul2">
+					<li><img src="{% static 'images/ha/bao3.jpg' %}"></li>
+					<li><img src="{% static 'images/ha/bao4.jpg' %}"></li>
+					<li><img src="{% static 'images/ha/bao5.jpg' %}"></li>
+				</ul>
+			</div>
+		</div>
+		<div class="money">
+			<div id="lift">
+				<ul>
+					<li class="iconfont">
+						<a class="iconfont" target="_blank"></a>
+						<span style="display: none;">生鲜果蔬</span>
+					</li>
+					<li>
+						<a class="iconfont" target="_blank"></a>
+						<span style="display: none;">食品饮料</span>
+					</li>
+					<li>
+						<a class="iconfont" target="_blank"></a>
+						<span style="display: none;">时尚大牌</span>
+					</li>
+					<li>
+						<a class="iconfont" target="_blank"></a>
+						<span style="display: none;">精品百货</span>
+					</li>
+					<li>
+						<a class="iconfont" target="_blank"></a>
+						<span style="display: none;">个护清洁</span>
+					</li>
+
+					<li>
+						<a class="iconfont" target="_blank"></a>
+						<span style="display: none;">母婴玩具</span>
+					</li>
+					<li>
+						<a class="iconfont" target="_blank"></a>
+						<span style="display: none;">家居家纺</span>
+					</li>
+					<li>
+						<a class="iconfont" target="_blank"></a>
+						<span style="display: none;">3C数码</span>
+					</li>
+					<div>
+						<a class="iconfont" href="#top" target="_blank"></a>
+					</div>
+				</ul>
+			</div>
+			<div class="shop1 main aposition">
+				<div id="boxf11">
+					<div id="boxf1"><!--轮播图-->
+						<ul id="f1" style="width: 1224px;">
+							<li>
+								<img src="{% static 'images/ha/f101.jpg' %}">
+							</li>
+							<li>
+								<img src="{% static 'images/ha/f102.jpg' %}">
+							</li>
+							<li>
+								<img src="{% static 'images/ha/f103.jpg' %}">
+							</li>
+						<li>
+								<img src="{% static 'images/ha/f101.jpg' %}">
+							</li></ul>
+						<ul id="f11">
+							<li><span></span></li>
+							<li><span></span></li>
+							<li><span></span></li>
+						</ul>
+
+					</div>
+					<ul id="listf1">
+						<li><img src="{% static 'images/ha/f111.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f112.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f113.jpg' %}"></li>
+					</ul>
+					<ul id="listf11">
+						<li><img src="{% static 'images/ha/f121.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f122.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f123.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f124.jpg' %}"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="shop2 main aposition">
+                                                <!--
+                                                	作者：offline
+                                                	时间：2017-10-11
+                                                	描述：2楼
+                                                -->
+				<div id="boxf11">
+					<div id="boxf1"><!--轮播图-->
+						<ul id="f2" style="width: 1224px;">
+							<li>
+								<img src="{% static 'images/ha/f201.jpg' %}">
+							</li>
+							<li>
+								<img src="{% static 'images/ha/f202.jpg' %}">
+							</li>
+							<li>
+								<img src="{% static 'images/ha/f203.jpg' %}">
+							</li>
+						<li>
+								<img src="{% static 'images/ha/f201.jpg' %}">
+							</li></ul>
+						<ul id="f12">
+							<li><span></span></li>
+							<li><span></span></li>
+							<li><span></span></li>
+						</ul>
+					</div>
+					<ul id="listf1">
+						<li><img src="{% static 'images/ha/f111.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f112.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f113.jpg' %}"></li>
+					</ul>
+					<ul id="listf11">
+						<li><img src="{% static 'images/ha/f121.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f122.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f123.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f124.jpg' %}"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="shop3 main aposition">
+				<div id="boxf11">
+					<div id="boxf1"><!--轮播图-->
+						<ul id="f3" style="width: 1224px;">
+							<li>
+								<img src="{% static 'images/ha/f301.jpg' %}">
+							</li>
+							<li>
+								<img src="{% static 'images/ha/f302.jpg' %}">
+							</li>
+							<li>
+								<img src="{% static 'images/ha/f303.jpg' %}">
+							</li>
+						<li>
+								<img src="{% static 'images/ha/f301.jpg' %}">
+							</li></ul>
+						<ul id="f13">
+							<li><span></span></li>
+							<li><span></span></li>
+							<li><span></span></li>
+						</ul>
+					</div>
+					<ul id="listf1">
+						<li><img src="{% static 'images/ha/f111.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f112.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f113.jpg' %}"></li>
+					</ul>
+					<ul id="listf11">
+						<li><img src="{% static 'images/ha/f121.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f122.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f123.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f124.jpg' %}"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="shop4 main aposition">
+				<div id="boxf11">
+					<div id="boxf1"><!--轮播图-->
+						<ul id="f4" style="width: 1224px;">
+							<li>
+								<img src="{% static 'images/ha/f401.jpg' %}">
+							</li>
+							<li>
+								<img src="{% static 'images/ha/f402.jpg' %}">
+							</li>
+							<li>
+								<img src="{% static 'images/ha/f403.jpg' %}">
+							</li>
+						<li>
+								<img src="{% static 'images/ha/f401.jpg' %}">
+							</li></ul>
+						<ul id="f14">
+							<li><span></span></li>
+							<li><span></span></li>
+							<li><span></span></li>
+						</ul>
+					</div>
+					<ul id="listf1">
+						<li><img src="{% static 'images/ha/f111.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f112.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f113.jpg' %}"></li>
+					</ul>
+					<ul id="listf11">
+						<li><img src="{% static 'images/ha/f121.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f122.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f123.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f124.jpg' %}"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="shop5 main aposition">
+				<div id="boxf11">
+					<div id="boxf1"><!--轮播图-->
+						<ul id="f5" style="width: 1224px;">
+							<li>
+								<img src="{% static 'images/ha/f501.jpg' %}">
+							</li>
+							<li>
+								<img src="{% static 'images/ha/f502.jpg' %}">
+							</li>
+							<li>
+								<img src="{% static 'images/ha/f503.jpg' %}">
+							</li>
+						<li>
+								<img src="{% static 'images/ha/f501.jpg' %}">
+							</li></ul>
+						<ul id="f15">
+							<li><span></span></li>
+							<li><span></span></li>
+							<li><span></span></li>
+						</ul>
+					</div>
+					<ul id="listf1">
+						<li><img src="{% static 'images/ha/f111.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f112.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f113.jpg' %}"></li>
+					</ul>
+					<ul id="listf11">
+						<li><img src="{% static 'images/ha/f121.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f122.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f123.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f124.jpg' %}"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="shop6 main aposition">
+				<div id="boxf11">
+					<div id="boxf1"><!--轮播图-->
+						<ul id="f6" style="width: 1224px;">
+							<li>
+								<img src="{% static 'images/ha/f601.jpg' %}">
+							</li>
+							<li>
+								<img src="{% static 'images/ha/f602.jpg' %}">
+							</li>
+							<li>
+								<img src="{% static 'images/ha/f603.jpg' %}">
+							</li>
+						<li>
+								<img src="{% static 'images/ha/f601.jpg' %}">
+							</li></ul>
+						<ul id="f16">
+							<li><span></span></li>
+							<li><span></span></li>
+							<li><span></span></li>
+						</ul>
+					</div>
+					<ul id="listf1">
+						<li><img src="{% static 'images/ha/f111.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f112.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f113.jpg' %}"></li>
+					</ul>
+					<ul id="listf11">
+						<li><img src="{% static 'images/ha/f121.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f122.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f123.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f124.jpg' %}"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="shop7 main aposition">
+				<div id="boxf11">
+					<div id="boxf1"><!--轮播图-->
+						<ul id="f7" style="width: 1224px;">
+							<li>
+								<img src="{% static 'images/ha/f701.jpg' %}">
+							</li>
+							<li>
+								<img src="{% static 'images/ha/f702.jpg' %}">
+							</li>
+							<li>
+								<img src="{% static 'images/ha/f703.jpg' %}">
+							</li>
+						<li>
+								<img src="{% static 'images/ha/f701.jpg' %}">
+							</li></ul>
+						<ul id="f17">
+							<li><span></span></li>
+							<li><span></span></li>
+							<li><span></span></li>
+						</ul>
+					</div>
+					<ul id="listf1">
+						<li><img src="{% static 'images/ha/f111.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f112.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f113.jpg' %}"></li>
+					</ul>
+					<ul id="listf11">
+						<li><img src="{% static 'images/ha/f121.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f122.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f123.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f124.jpg' %}"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="shop8 main aposition">
+				<div id="boxf11">
+					<div id="boxf1"><!--轮播图-->
+						<ul id="f8" style="width: 1224px;">
+							<li>
+								<img src="{% static 'images/ha/f801.jpg' %}">
+							</li>
+							<li>
+								<img src="{% static 'images/ha/f802.jpg' %}">
+							</li>
+							<li>
+								<img src="{% static 'images/ha/f803.jpg' %}">
+							</li>
+						<li>
+								<img src="{% static 'images/ha/f801.jpg' %}">
+							</li></ul>
+						<ul id="f18">
+							<li><span></span></li>
+							<li><span></span></li>
+							<li><span></span></li>
+						</ul>
+					</div>
+					<ul id="listf1">
+						<li><img src="{% static 'images/ha/f111.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f112.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f113.jpg' %}"></li>
+					</ul>
+					<ul id="listf11">
+						<li><img src="{% static 'images/ha/f121.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f122.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f123.jpg' %}"></li>
+						<li><img src="{% static 'images/ha/f124.jpg' %}"></li>
+					</ul>
+				</div>
+			</div>
+			<div class="bot main">
+				<dl>新手入门
+					<img src="{% static 'images/footer1.png' %}">
+					<dd>购物流程</dd>
+					<dd>会员介绍</dd>
+					<dd>常见问题</dd>
+					<dd>发票说明</dd>
+					<dd>联系客服</dd>
+				</dl>
+				<dl>配送服务
+					<img src="{% static 'images/footer2.png' %}">
+					<dd>配送范围及运费</dd>
+					<dd>配送进度查询</dd>
+					<dd>自提服务</dd>
+					<dd>商品验货与签收</dd>
+				</dl>
+				<dl>支付方式
+					<img src="{% static 'images/footer3.png' %}">
+					<dd>货到付款</dd>
+					<dd>在线支付</dd>
+				</dl>
+				<dl>售后服务
+					<img src="{% static 'images/footer4.png' %}">
+					<dd>退换货政策</dd>
+					<dd>退换货流程</dd>
+					<dd>退款说明</dd>
+				</dl>
+				<dl>商家支持
+					<img src="{% static 'images/footer5.png' %}">
+					<dd>商家入驻</dd>
+					<dd>商家规则</dd>
+					<dd>商家常见问题</dd>
+				</dl>
+			</div>
+		</div>
+		<div class="bott">
+			<div class="main" id="sx">
+				<ul id="xs">
+					<li>关于我们</li>
+					<li>联系我们</li>
+					<li>加盟合作</li>
+					<li>诚征英才</li>
+					<li>友情链接</li>
+				</ul>
+				<p>百联集团有限公司旗下 上海百联全渠道电子商务有限公司版权所有       |   客服电话：400-900-8800    |    沪ICP备15028847号</p>
+				<p><a href="http://res12.iblimg.com/respc-1/resources/v4.0/img/yaopingzigezheng.png?bl_mmc=blemall_-_0_-_0_-_0" target="_blank">互联网药品信息服务资质证书编号：沪-（非营业性）-2016-0044</a></p>
+				<ul id="xs1">
+					<li>
+						<img src="{% static 'images/ha/gongan.png' %}">
+						<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010102002366&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">沪公网安备 31010102002366号  </a>
+					</li>
+					<li>
+						<img src="{% static 'images/ha/gongs.png' %}">
+						<a href="http://shwg.dianping.com/?bl_mmc=blemall_-_0_-_0_-_0" target="_blank">网购大家评</a>
+					</li>
+					<li>
+						<img src="{% static 'images/ha/wangjing.png' %}">
+						<a href="http://218.242.124.22:8081/businessCheck/verifKey.do?showType=extShow&amp;serial=9031000020160729145737000001099658-SAIC_SHOW_310000-20160406145114141192&amp;signData=MEYCIQCUhx+ulQL4t9jJgfgCH1oeTxexuWOVww3Hel3/UlRyLQIhAO2fVtZDl0EkYb0p/3M50cXqe694wDQoJNuUKNdQNOWf&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">上海工商</a>
+					</li>
+					<li>
+						<img src="{% static 'images/ha/zhizhao.png' %}">
+						<a href="http://promotion.bl.com/nc/PC_HDGL20170407000001552_1592.html?bl_mmc=blemall_-_0_-_0_-_0" target="_blank">经营执照</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="top_menu">
+			<div class="main">
+				<div class="menu">
+					<div class="menu_txt">全部分类</div>
+					<div class="menu_enter"></div>
+				</div>
+				<div class="menu_img">
+					<img src="{% static 'images/1logo.png' %}">
+				</div>
+				<div>
+					<form>
+						<input type="search" placeholder="iphone8" style="width: 477px; height: 35px; border: 0px; padding: 0px 10px;"><input type="submit" value="搜索" style="cursor: pointer; width: 83px; height: 36px; background: rgb(192, 17, 51); border: 0px;">
+					</form>
+				</div>
+				<div class="box3" style="position: absolute; left: 117px; top: 75px; display: none;"><div class="banner-main">
+				<dl class="icon" style="padding-top: 1px; height: 426px;">
+
+					<dd class="iconfont dd"> <a href="http://global.bl.com/?bl_ad=P668899_-_9999062360_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">百联进口 全球购</a>
+						<div class="bannerx" style="top: 0px;">
+							<div class="box1">
+								<ul>
+									<h5>进口美妆护肤</h5>
+										<a href="" target="_blank">面膜</a>
+									 	<a href="" target="_blank">乳液/面霜</a>
+									 	<a href="" target="_blank">化妆水</a>
+										<a href="" target="_blank">护肤套装</a>
+										<a href="" target="_blank">眼部护理</a>
+										<a href="" target="_blank">面部精华</a>
+										<a href="" target="_blank">防晒</a>
+										<a href="" target="_blank">美容仪</a>
+										<a href="" target="_blank">洁面</a>
+										<a href="" target="_blank">卸妆</a>
+										<a href="" target="_blank">彩妆</a>
+										<a href="" target="_blank">香水</a>
+										<a href="" target="_blank">男士护肤</a>
+								</ul>
+								<ul>
+									<h5>进口个人护理</h5>
+										<a href="" target="_blank">洗发水</a>
+										<a href="" target="_blank">护发素</a>
+										<a href="" target="_blank">沐浴露</a>
+										<a href="" target="_blank">漱口水</a>
+										<a href="" target="_blank">牙膏</a>
+										<a href="" target="_blank">牙刷</a>
+										<a href="" target="_blank">身体乳</a>
+										<a href="" target="_blank">护手霜</a>
+										<a href="" target="_blank">身体护理</a>
+										<a href="" target="_blank">卫生巾</a>
+								</ul>
+								<ul>
+									<h5>进口美食/营养保健</h5>
+										<a href="" target="_blank">坚果</a>
+										<a href="" target="_blank">果干</a>
+										<a href="" target="_blank">膨化</a>
+										<a href="" target="_blank">糖果</a>
+										<a href="" target="_blank">海苔</a>
+										<a href="" target="_blank">曲奇</a>
+										<a href="" target="_blank">饼干</a>
+										<a href="" target="_blank">威化</a>
+										<a href="" target="_blank">橄榄油</a>
+										<a href="" target="_blank">泡面</a>
+										<a href="" target="_blank">蜂蜜</a>
+										<a href="" target="_blank">维生素</a>
+										<a href="" target="_blank">葡萄籽</a>
+										<a href="" target="_blank">蔓越莓</a>
+								</ul>
+								<ul>
+									<h5>进口牛奶/冲饮/酒水</h5>
+										<a href="" target="_blank">牛奶</a>
+										<a href="" target="_blank">全脂</a>
+										<a href="" target="_blank">低脂</a>
+										<a href="" target="_blank">豆奶</a>
+										<a href="" target="_blank">成人奶粉</a>
+										<a href="" target="_blank">营养谷物</a>
+										<a href="" target="_blank">咖啡</a>
+										<a href="" target="_blank">袋泡茶</a>
+										<a href="" target="_blank">水</a>
+										<a href="" target="_blank">碳酸</a>
+										<a href="" target="_blank">葡萄酒</a>
+										<a href="" target="_blank">啤酒</a>
+										<a href="" target="_blank">洋酒</a>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>进口母婴</h5>
+										<a href="" target="_blank">奶粉</a>
+										<a href="" target="_blank">辅食</a>
+										<a href="" target="_blank">纸尿裤</a>
+										<a href="" target="_blank">奶瓶奶嘴</a>
+										<a href="" target="_blank">水杯餐具</a>
+										<a href="" target="_blank">洗发沐浴</a>
+										<a href="" target="_blank">宝宝护肤</a>
+										<a href="" target="_blank">口腔清洁</a>
+										<a href="" target="_blank">手推车</a>
+										<a href="" target="_blank">安全座椅</a>
+										<a href="" target="_blank">玩具</a>
+								</ul>
+								<ul>
+									<h5>进口品质家居</h5>
+										<a href="" target="_blank">吸尘器</a>
+										<a href="" target="_blank">咖啡机</a>
+										<a href="" target="_blank">榨汁机</a>
+										<a href="" target="_blank">滤水壶</a>
+										<a href="" target="_blank">锅具</a>
+										<a href="" target="_blank">刀具</a>
+										<a href="" target="_blank">乳胶枕</a>
+								</ul>
+								<ul>
+									<h5>进口鞋靴箱包</h5>
+										<a href="" target="_blank">GUCCI</a>
+										<a href="" target="_blank">kipling</a>
+										<a href="" target="_blank">MK</a>
+										<a href="" target="_blank">MCM</a>
+										<a href="" target="_blank">KENZO</a>
+										<a href="" target="_blank">FURLA</a>
+										<a href="" target="_blank">剑桥包</a>
+										<a href="" target="_blank">ANELLO</a>
+								</ul>
+								<ul>
+									<h5>进口饰品/手表</h5>
+										<a href="" target="_blank">雷朋</a>
+										<a href="" target="_blank">apm</a>
+										<a href="" target="_blank">潘多拉</a>
+								</ul>
+							</div>
+
+							<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+								<li><a href="" target="_blank"><img src="{% static 'images/ha/11f.jpg' %}"></a></li>
+								<li><a href="" target="_blank"><img src="{% static 'images/ha/12f.jpg' %}"></a></li>
+							</ul>
+						<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					</dd>
+					<dd class="iconfont dd"> <a href="http://search.bl.com/c-a102768.html?bl_ad=P668899_-_9999060472_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">生鲜食品</a>
+						<div class="bannerx" style="top: 0px;">
+							<div class="box1">
+								<ul>
+									<h5>新鲜水果</h5>
+									<a href="" target="_blank">进口水果</a>
+									<a href="" target="_blank">国产水果</a>
+									<a href="" target="_blank">苹果</a>
+									<a href="" target="_blank">芒果</a>
+									<a href="" target="_blank">猕猴桃</a>
+									<a href="" target="_blank">杨桃</a>
+									<a href="" target="_blank">柑橘橙</a>
+									<a href="" target="_blank">菠萝/凤梨</a>
+									<a href="" target="_blank">山竹</a>
+									<a href="" target="_blank">莲雾</a>
+									<a href="" target="_blank">牛油果</a>
+									<a href="" target="_blank">火龙果</a>
+									<a href="" target="_blank">樱桃/车厘子</a>
+									<a href="" target="_blank">葡萄提子</a>
+									<a href="" target="_blank">黑布林</a>
+									<a href="" target="_blank">西柚</a>
+								</ul>
+								<ul>
+									<h5>精选肉类</h5>
+									<a href="" target="_blank">牛肉</a>
+									<a href="" target="_blank">猪肉</a>
+									<a href="" target="_blank">冷冻猪肉</a>
+									<a href="" target="_blank">冰鲜猪肉</a>
+									<a href="" target="_blank">羊肉</a>
+									<a href="" target="_blank">牛排</a>
+									<a href="" target="_blank">牛腱</a>
+									<a href="" target="_blank">牛腩</a>
+									<a href="" target="_blank">牛尾</a>
+									<a href="" target="_blank">火腿</a>
+								</ul>
+								<ul>
+									<h5>海鲜水产</h5>
+									<a href="" target="_blank">鱼类</a>
+									<a href="" target="_blank">大闸蟹</a>
+									<a href="" target="_blank">三文鱼</a>
+									<a href="" target="_blank">鲳鱼</a>
+									<a href="" target="_blank">虾类</a>
+									<a href="" target="_blank">虾仁</a>
+									<a href="" target="_blank">蟹类</a>
+									<a href="" target="_blank">帝王蟹</a>
+									<a href="" target="_blank">海参</a>
+									<a href="" target="_blank">贝类</a>
+									<a href="" target="_blank">扇贝</a>
+								</ul>
+								<ul>
+									<h5>禽类/蛋类</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">鸡肉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鸡腿</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鸡翅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鸭肉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鸡蛋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鸭蛋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">咸鸭蛋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">松花皮蛋</a></li>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>速冻食品</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">水饺</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">汤圆</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">混沌</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">包子</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">馒头</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">面条</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鱼丸</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">贡丸</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">速冻蔬菜</a></li>
+								</ul>
+								<ul>
+									<h5>新鲜蔬菜/蔬菜随心打</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">根茎类</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">菌菇类</a></li>
+								</ul>
+								<ul>
+									<h5>烘焙乳品</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">低温鲜奶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">新鲜酸奶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">冰淇淋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">新鲜蛋糕</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">低温奶酪</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">黄油</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">奶油</a></li>
+								</ul>
+								<ul>
+									<h5>时令特色</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">大闸蟹</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">乔西牛奶</a></li>
+								</ul>
+							</div>
+						<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/21f.jpg' %}"></a></li>
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/22f.jpg' %}"></a></li>
+						</ul>
+					<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					</dd>
+					<dd class="iconfont dd"> <a href="http://search.bl.com/c-a102660.html?bl_ad=P668899_-_9999060421_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">食品粮油</a>
+						<a href="http://search.bl.com/c-a212822.html?bl_ad=P668899_-_9999060421_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank"> 酒水冲饮</a>
+						<div class="bannerx" style="top: 0px;">
+							<div class="box1">
+								<ul>
+									<h5>休闲食品</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">膨化食品</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">米饼</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">薯片</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">坚果</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">碧根果</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">杏仁/巴旦木</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">蜜饯果干</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">肉干肉脯</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">豆干</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鸭脖</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">海味零食</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">海苔</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">糖果</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">巧克力</a></li>
+								</ul>
+								<ul>
+									<h5>饼干糕点</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">曲奇</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">饼干</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">杂粮饼干</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">中式糕点</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">沙琪玛</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">凤梨酥</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">肉松饼</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">西式糕点</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">面包</a></li>
+								</ul>
+								<ul>
+									<h5>粮油干货</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">大米</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">食用油</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">橄榄油</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">菜籽油</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">面粉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">淀粉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">杂粮</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">挂面</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">意面</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">粉丝</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">香菇</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">红枣</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">木耳</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">枸杞</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">银耳</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">桂圆干</a></li>
+								</ul>
+								<ul>
+									<h5>素食调味</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">方便面</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">进口泡面</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">肉罐头</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">水产罐头</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">八宝粥</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">盐</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">糖</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">醋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">酱油</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">料酒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">香油</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鸡精</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">调味料</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">调味酱</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">酱菜</a></li>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>牛奶乳品</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">纯牛奶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">进口牛奶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">酸奶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">豆奶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">调味奶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">成人奶粉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">纽仕兰</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">安佳</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">伊利</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">德运</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">光明</a></li>
+								</ul>
+								<ul>
+									<h5>中外名酒</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">白酒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">红葡萄酒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">白葡萄酒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洋酒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">起泡酒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">啤酒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">黄酒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">保健酒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鸡尾酒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">五粮液</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洋河</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">茅台</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">泸州老窖</a></li>
+								</ul>
+								<ul>
+									<h5>饮料</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">饮用水</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">果汁</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">碳酸饮料</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">茶饮料</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">功能饮料</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">即饮咖啡</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">植物蛋白饮料</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">含乳饮料</a></li>
+								</ul>
+								<ul>
+									<h5>咖啡/茶叶/冲调</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">速溶咖啡</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">咖啡豆</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">咖啡粉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">滤挂咖啡</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">绿茶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">菊花茶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">红茶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">花草茶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">袋泡茶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">普洱茶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">麦片</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">奶茶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">柚子茶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">蜂蜜</a></li>
+								</ul>
+							</div>
+						<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/31f.jpg' %}"></a></li>
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/32f.jpg' %}"></a></li>
+						</ul>
+					<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					<!--
+                    	作者：offline
+                    	时间：2017-10-12
+                    	描述：第三栏 休闲食品
+                    -->
+					</dd>
+					<dd class="iconfont dd"> <a href="http://search.bl.com/c-a103443.html?bl_ad=P668899_-_9999060376_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">美容护理</a>
+						<div class="bannerx" style="top: 0px;">
+							<div class="box1">
+								<ul>
+									<h5>面部护肤</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">乳液面霜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">护肤套装</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洁面</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">面膜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">精华</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">爽肤水</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">面部喷雾</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">眼霜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">润唇膏</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">卸妆</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">防晒</a></li>
+								</ul>
+								<ul>
+									<h5>美发护肤</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">洗发水</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">进口洗发水</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">护发素</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">发膜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洗护套装</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">头发造型</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">弹力素</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">发泥发蜡</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">染发</a></li>
+								</ul>
+								<ul>
+									<h5>女性护理</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">卫生巾</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">日用</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">夜用</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">安心裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">组合套装</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">卫生护垫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">私处洗液</a></li>
+								</ul>
+								<ul>
+									<h5>男士护肤</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">洁面</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">爽肤水</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">乳液面霜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">精华</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洗发水</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">沐浴露</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">剃须刀</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">剃须泡沫</a></li>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>身体护理/沐浴清洁</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">身体乳</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洗手液</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">香皂</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">泡澡浴盐</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">沐浴露</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">护手霜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">足部护理</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">身体磨砂</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">美体瘦身</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">精油芳疗</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">脱毛</a></li>
+								</ul>
+								<ul>
+									<h5>彩妆</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">BB霜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">隔离</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">粉底</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">粉饼</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">遮瑕</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">散粉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">口红</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">睫毛膏</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">眼影</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">眼线</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">眉线笔</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">香水</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">指甲油</a></li>
+								</ul>
+								<ul>
+									<h5>美容工具/洗护用具</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">化妆棉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">美发梳</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">美甲工具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">眼眉工具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">面部工具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">浴球/浴花</a></li>
+								</ul>
+								<ul>
+									<h5>口腔护理</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">牙膏</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">进口牙膏</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">漱口水</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">牙刷</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电动牙刷</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">口气清新剂</a></li>
+								</ul>
+							</div>
+						<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/41f.jpg' %}"></a></li>
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/42f.jpg' %}"></a></li>
+						</ul>
+					<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					<!--
+                    	作者：offline
+                    	时间：2017-10-12
+                    	描述：面部护理
+                    -->
+					</dd>
+					<dd class="iconfont dd"> <a href="http://search.bl.com/c-a102435.html?bl_ad=P668899_-_9999059882_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">母婴 玩具</a>
+						<div class="bannerx" style="top: 0px;">
+							<div class="box1">
+								<ul>
+									<h5>奶粉/辅食</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">奶粉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">一段</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">二段</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">三段</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">四段</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">孕妈奶粉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">特殊配方</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">有机奶粉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">米粉粥</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">营养品</a></li>
+								</ul>
+								<ul>
+									<h5>尿裤/湿巾</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">纸尿裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">NB</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">S</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">M</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">L</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">XL</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">拉拉裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">婴儿湿巾</a></li>
+								</ul>
+								<ul>
+									<h5>宝宝洗护清洁</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">洗发洗护</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">沐浴露</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">婴儿护肤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">牙膏/牙刷</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">驱蚊/防痱</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洗衣液</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洗衣皂</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">奶瓶清洁</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洗手液</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">坐便器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">日常护理</a></li>
+								</ul>
+								<ul>
+									<h5>玩具</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">早教益智</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">彩泥手工</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">婴幼儿玩具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电动玩具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">积木拼图</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">毛绒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">娃娃</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">动漫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">休闲玩具</a></li>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>婴童车床/婴幼家纺</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">安全座椅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">婴儿推车</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">婴儿背带</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">婴儿床</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">餐椅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">自行车</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">儿童枕</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">抱枕/抱毯</a></li>
+								</ul>
+								<ul>
+									<h5>哺育喂养用品</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">奶瓶/奶嘴</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">吸奶器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">奶瓶消毒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">暖奶器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">储奶袋/瓶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">安抚奶嘴</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">牙胶咬咬乐</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">奶瓶刷/奶嘴刷</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">儿童餐具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">吸管杯</a></li>
+								</ul>
+								<ul>
+									<h5>童装/童鞋/婴儿服饰</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">T恤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">内衣裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">运动裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">童套装</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">连衣裙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">外套/夹克</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">休闲裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">牛仔裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">睡衣</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">婴儿鞋</a></li>
+								</ul>
+								<ul>
+									<h5>孕妈专区</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">防溢乳垫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">孕妈洗护</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">产后修复</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">文胸/内裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">防辐射服</a></li>
+								</ul>
+							</div>
+						<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/51f.jpg' %}"></a></li>
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/52f.jpg' %}"></a></li>
+						</ul>
+					<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					</dd>
+					<dd class="iconfont dd"> <a href="http://search.bl.com/c-a102537.html?bl_ad=P668899_-_9999061110_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">餐厨用具 家具家装</a>
+						<div class="bannerx" style="top: 0px;">
+							<div class="box1">
+								<ul>
+									<h5>厨具锅具</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">套装锅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">炒锅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">平底锅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">汤锅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">煲/砂锅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">蒸锅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">压力锅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">烧水壶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">刀具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">砧板</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">铲勺</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">收纳</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">置物架</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">厨房工具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">烘焙</a></li>
+								</ul>
+								<ul>
+									<h5>收纳洗晒</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">收纳箱</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">收纳柜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">收纳袋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">压缩袋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">衣架</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">晾晒衣架</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">杂物收纳</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洗晒用具</a></li>
+								</ul>
+								<ul>
+									<h5>居家日用</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">雨伞雨具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">粘钩挂钩</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">口罩</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">纸巾套/盒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">防潮垫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">保暖贴</a></li>
+								</ul>
+								<ul>
+									<h5>家装建材/家具</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">浴霸</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">马桶盖</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">厨房装修</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">卫浴装修</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">开关插座</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">五金工具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">灯具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">床垫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">床</a></li>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>餐具/水具</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">水杯</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">保鲜盒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">滤水盒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">碗碟</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">餐具套装</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">果盘托盘</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">刀叉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">筷子</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">酒具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">保温杯</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">咖啡具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">茶具</a></li>
+								</ul>
+								<ul>
+									<h5>床上用品</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">床品套件</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">床垫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">被子</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">秋冬被</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">枕头</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">记忆乳胶枕</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">毛毯</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">床单被罩</a></li>
+								</ul>
+								<ul>
+									<h5>家纺布艺</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">毛巾</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">毛巾礼盒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">浴巾浴袍</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">家居拖鞋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">靠垫坐垫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">地毯地垫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">围裙袖套</a></li>
+								</ul>
+								<ul>
+									<h5>宠物用品</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">猫粮</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">狗粮</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">宠物用品</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">宠物清洁</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">花瓶</a></li>
+								</ul>
+							</div>
+						<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/61f.jpg' %}"></a></li>
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/62f.jpg' %}"></a></li>
+						</ul>
+					<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					</dd>
+					<dd class="iconfont dd"> <a href="http://search.bl.com/c-a102561.html?bl_ad=P668899_-_9999059635_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">女装 男装</a>
+						<div class="bannerx" style="top: 0px;">
+							<div class="box1">
+								<ul>
+									<h5>衣物清洁护理</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">洗衣液凝珠</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洗衣粉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">衣物除菌</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">柔顺剂</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洗衣皂</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">衣领净</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">漂白</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">彩漂</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">天然皂粉</a></li>
+								</ul>
+								<ul>
+									<h5>家庭清洁</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">防潮防蛀</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">驱蚊驱虫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">地板清洁</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">玻璃清洁</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">冰箱去味</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">除甲醛</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">空气清新</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">家电清洁</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鞋油鞋刷</a></li>
+								</ul>
+								<ul>
+									<h5>清洁工具</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">拖把</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">旋转拖把</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">扫把</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">抹布</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">百洁布</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">钢丝球</a></li>
+								</ul>
+								<ul>
+									<h5>卫浴用品</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">肥皂盒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">浴室防滑垫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">水桶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">脸盆</a></li>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>纸质品</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">抽纸</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">卷筒纸</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">手帕纸</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">餐巾纸</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">湿巾</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">平板卫生纸</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">厨房用纸</a></li>
+								</ul>
+								<ul>
+									<h5>厨卫清洁</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">洗洁精</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">消毒液</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">油污净</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洁厕剂</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">管道通</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">卫浴清洁剂</a></li>
+								</ul>
+								<ul>
+									<h5>一次性用品</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">保鲜膜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">垃圾袋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">保鲜袋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">塑料杯</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">纸杯</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">一次性餐具</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">锡纸铝箔</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鞋套</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">牙签</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">手套</a></li>
+								</ul>
+								<ul>
+									<h5>品牌推荐</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">奥妙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">金纺</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">立白</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">蓝月亮</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">威猛先生</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">威露士</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">超能</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">汰渍</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">妙洁</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">白猫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">滴露</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">樱之花</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">茶花</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">妮飘</a></li>
+								</ul>
+							</div>
+						<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/71f.jpg' %}"></a></li>
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/72f.jpg' %}"></a></li>
+						</ul>
+					<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					</dd>
+					<dd class="iconfont dd"> <a href="http://search.bl.com/c-a102653.html?bl_ad=P668899_-_9999060010_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">鞋靴箱包</a>
+					<a href="http://search.bl.com/c-a102261.html?bl_ad=P668899_-_9999060010_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank"> 珠宝首饰</a>
+						<div class="bannerx" style="top: 0px;">
+							<div class="box1">
+								<ul>
+									<h5>女士上装</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">长袖T恤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">衬衫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">针织衫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">外套</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">小西装</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">卫衣</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">风衣</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">毛呢大衣</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">羽绒服</a></li>
+								</ul>
+								<ul>
+									<h5>女士裤装</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">牛仔裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">休闲裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">小脚裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">短裤</a></li>
+								</ul>
+								<ul>
+									<h5>男士上装</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">T恤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">POLO衫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">外套</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">卫衣</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">针织衫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">长袖衬衫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">西装</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">短袖衬衫</a></li>
+								</ul>
+								<ul>
+									<h5>睡衣/家居服</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">男士家居服</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">女士家居服</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">秋冬家居服</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">睡裙</a></li>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>女士裙装/套装</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">连衣裙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">蕾丝连衣裙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">印花连衣裙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">棉麻连衣裙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">背心裙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">半身裙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">A字裙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">包臀裙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">百褶裙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">休闲套装</a></li>
+								</ul>
+								<ul>
+									<h5>文胸塑身</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">文胸</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">文胸套装</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">光面文胸</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">聚拢文胸</a></li>
+								</ul>
+								<ul>
+									<h5>男士裤装</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">休闲裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">牛仔裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">西装裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">短裤</a></li>
+								</ul>
+								<ul>
+									<h5>内衣/内裤/袜子</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">女士内裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">男士内裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">女袜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">男袜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">连裤袜/丝袜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">女士保暖内衣</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">男士保暖内衣</a></li>
+								</ul>
+							</div>
+						<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/81f.jpg' %}"></a></li>
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/82f.jpg' %}"></a></li>
+						</ul>
+					<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					</dd>
+					<dd class="iconfont dd"> <a href="http://search.bl.com/c-a101742.html?bl_ad=P668899_-_9999060060_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">手机数码 电脑办公</a>
+						<div class="bannerx" style="top: 0px;">
+							<div class="box1">
+								<ul>
+									<h5>手机通讯</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">手机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">iPhone</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">华为</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">荣耀</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">三星</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">小米</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">魅族</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">OPPO</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">vivo</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">老人机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">大屏手机</a></li>
+								</ul>
+								<ul>
+									<h5>电脑整机/装机DIY</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">笔记本</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">游戏本</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">台式机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">一体机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">平板电脑</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">iPad</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">surface</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">显示器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">ThinkPad</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">硬盘</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">联想</a></li>
+								</ul>
+								<ul>
+									<h5>时尚影音/智能设备/电子教育</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">耳机耳麦</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">音响</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">音乐播放器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电玩游戏</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">智能手环</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">智能手表</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">智能眼镜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">无人机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">Kindle</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">录音笔</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电子教育</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">乐器</a></li>
+								</ul>
+								<ul>
+									<h5>办公设备/打印耗材</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">一体机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">打印机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">打印耗材</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">碎纸机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">装订机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">塑封机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">保险箱</a></li>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>手机/数码配件</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">移动电源</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电池</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">手机耳机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">蓝牙耳机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">贴膜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">数据线</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">车载配件</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">手机套</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">存储卡</a></li>
+								</ul>
+								<ul>
+									<h5>摄影摄像</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">数码相机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">单反</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">单电/微单</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">拍立得</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">镜头</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">运动摄像</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">闪光灯</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">相机包</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">三脚架</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">美颜神器</a></li>
+								</ul>
+								<ul>
+									<h5>电脑外设/网络设备</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">鼠标</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">键盘</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">键鼠套装</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鼠标垫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">配件</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">移动硬件</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">手写板</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">4G上网</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">路由器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">U盘</a></li>
+								</ul>
+								<ul>
+									<h5>办公用品/学生文具</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">笔</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">纸</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">本册便签</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">文件管理</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">文字修正</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">粘胶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">装订</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">计算器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">卷笔刀</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">书包</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">笔袋/笔盒</a></li>
+								</ul>
+							</div>
+						<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/91f.jpg' %}"></a></li>
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/92f.jpg' %}"></a></li>
+						</ul>
+					<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					</dd>
+					<dd class="iconfont dd"> <a href="http://search.bl.com/c-a102228.html?bl_ad=P668899_-_9999059985_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">家用电器</a>
+						<div class="bannerx" style="top: 0px;">
+							<div class="box1">
+								<ul>
+									<h5>大家电</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">平板电视</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">空调</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">冰箱</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洗衣机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">冰吧/冷柜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">酒柜</a></li>
+								</ul>
+								<ul>
+									<h5>中式厨房小电</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">电饭煲</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">养生壶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电压力锅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电磁炉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电饼铛</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电水壶/热水壶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电炖锅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">多用途锅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电火锅</a></li>
+								</ul>
+								<ul>
+									<h5>生活电器</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">空气净化器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">智能扫地机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">净水设备</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">吸尘器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">加湿器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">除湿器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电熨斗</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">挂烫机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">干衣机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">饮水机</a></li>
+								</ul>
+								<ul>
+									<h5>个护健康</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">剃须刀</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电动牙刷</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电吹风</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">美发器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">美颜仪</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洁面仪</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">脱毛器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">人体秤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">足浴盆</a></li>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>厨房大家电</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">燃气热水器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">烟灶套装</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">洗碗机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电热水器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">油烟机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">燃气灶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">消毒柜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">嵌入式电蒸烤箱</a></li>
+								</ul>
+								<ul>
+									<h5>西式厨房小电</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">微波炉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电烤箱</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">咖啡机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">面包机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">料理机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">榨汁机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">空气炸锅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">酸奶机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">打蛋器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">美颜煮蛋器神器</a></li>
+								</ul>
+								<ul>
+									<h5>两季电器</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">电风扇</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">无叶电风扇/塔扇</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">落地扇</a></li>
+								</ul>
+								<ul>
+									<h5>影音视听</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">网络机顶盒</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">家庭影院</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">收/录音机</a></li>
+								</ul>
+							</div>
+						<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/101f.jpg' %}"></a></li>
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/102f.jpg' %}"></a></li>
+						</ul>
+					<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					</dd>
+					<dd class="iconfont dd"> <a href="http://search.bl.com/c-a102103.html?bl_ad=P668899_-_9999060575_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">运动户外 汽车用品</a>
+						<div class="bannerx" style="top: 0px;">
+							<div class="box1">
+								<ul>
+									<h5>运动鞋服</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">T恤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">卫衣外套</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">套装</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">运动裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">跑步鞋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">篮球鞋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">板鞋/休闲鞋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">帆布鞋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">运动包</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">配件</a></li>
+								</ul>
+								<ul>
+									<h5>户外鞋服</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">冲锋衣裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">皮肤风衣</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">速干衣裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">抓绒衣裤</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">登山鞋</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">配件</a></li>
+								</ul>
+								<ul>
+									<h5>户外装备</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">帐篷</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">望远镜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">野餐用品</a></li>
+								</ul>
+								<ul>
+									<h5>运动器材</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">自行车</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电动车</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">跑步机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">动感单车</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">椭圆机</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">综合训练</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">哑铃</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">球类运动</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">排球</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">轮滑</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">游泳</a></li>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>汽车养护</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">机油</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">美孚</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">壳牌</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">嘉实多</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">添加剂</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">玻璃水</a></li>
+								</ul>
+								<ul>
+									<h5>车载电器</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">行车记录仪</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">车载净化器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">车载冰箱</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">车载电源</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">车载吸尘器</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">充气泵</a></li>
+								</ul>
+								<ul>
+									<h5>汽车内饰/应急救援</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">座垫座套</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">脚垫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">后背箱垫</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">方向盘套</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">头枕腰靠</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">车载香水</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">救援包</a></li>
+								</ul>
+								<ul>
+									<h5>美容清洗</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">洗车水枪</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">车蜡</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">擦车巾</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">清洁剂</a></li>
+								</ul>
+							</div>
+						<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/111f.jpg' %}"></a></li>
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/112f.jpg' %}"></a></li>
+						</ul>
+					<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					</dd>
+					<dd class="iconfont dd"> <a href="http://search.bl.com/c-a101989.html?bl_ad=P668899_-_9999060521_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">营养滋补 保健器械</a>
+						<div class="bannerx" style="top: 0px;">
+							<div class="box1">
+								<ul>
+									<h5>秋季"平"补</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">石斛/枫斗</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">冬虫夏草</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">燕窝</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">阿胶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">蜂蜜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">三七</a></li>
+								</ul>
+								<ul>
+									<h5>进口保健品</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">麦卢卡蜂蜜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">维生素</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">葡萄籽</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">酵素</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">螺旋藻</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鱼油</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">维骨力</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">代餐蛋白粉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">辅酶Q10</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">月见草</a></li>
+								</ul>
+								<ul>
+									<h5>传统滋养</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">蜂蜜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">阿胶</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">燕窝</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">人参</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">灵芝</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">三七</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">冬虫夏草</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鹿茸</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">药食同源</a></li>
+
+								</ul>
+								<ul>
+									<h5>基础营养</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">增强免疫力</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">减肥瘦身</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">美容养颜</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">保护视力</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">骨骼关节养护</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">调节三高</a></li>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>动植物提取物</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">玛卡</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">番茄红素</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">葡萄籽</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">蔓越莓</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">奶蓟草</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">人参</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">珍珠粉</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">鱼油</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">螺旋藻</a></li>
+								</ul>
+								<ul>
+									<h5>维生素</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">维生素B</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">维生素C</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">维生素D</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">钙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">铁</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">复合维生素</a></li>
+								</ul>
+								<ul>
+									<h5>适用人群</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">男士保健</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">女士保养</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">呵护老人</a></li>
+								</ul>
+								<ul>
+									<h5>畅销品牌</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">神象</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">雷允上</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">同仁堂</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">Swisse</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">澳佳宝</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">Doppelherz双心</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">GNC</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">Schiff</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">Natrol</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">欧姆龙</a></li>
+								</ul>
+							</div>
+						<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/121f.jpg' %}"></a></li>
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/122f.jpg' %}"></a></li>
+						</ul>
+					<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					</dd>
+					<dd class="iconfont dd"> <a href="http://blk.bl.com/?bl_ad=P668899_-_9999109339_-_3&amp;bl_mmc=blemall_-_0_-_0_-_0" target="_blank">礼品卡 充值 图书</a>
+						<div class="bannerx" style="top: 0px;">
+							<div class="box1">
+								<ul>
+									<h5>礼品卡/消费卡券</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">月饼券</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">大闸蟹券</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">新经典卡</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">生日卡</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">新婚卡</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">感恩卡</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">新生卡</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">乔迁卡</a></li>
+								</ul>
+								<ul>
+									<h5>生活图书</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">旅游</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">体育健身</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">饮食</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">休闲娱乐</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">居家</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">杂志</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">美容美体</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">孕产育儿</a></li>
+								</ul>
+								<ul>
+									<h5>文艺图书</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">小说</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">人物传记</a></li>
+								</ul>
+								<ul>
+									<h5>少儿图书</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">0-2岁</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">3-6岁</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">早教启蒙</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">幼儿手工</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">智力开发</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">少儿英语</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">少儿文学</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">少儿技能</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">少儿百科</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">亲子读物</a></li>
+								</ul>
+							</div>
+							<div class="box2">
+								<ul>
+									<h5>充值缴费</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">手机充值</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">流量充值</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">游戏充值</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">水费缴费</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">电费缴费</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">燃气缴费</a></li>
+								</ul>
+								<ul>
+									<h5>教辅图书</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">新华字典</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">汉语词典</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">成语词典</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">牛津词典</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">小学教辅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">初中教辅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">高中教辅</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">新概念</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">英语四级</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">英语六级</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">会计考试</a></li>
+								</ul>
+								<ul>
+									<h5>人文社科</h5>
+									<li style="display: inline-block;"><a href="" target="_blank">中国史</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">世界史</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">文化</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">宗教</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">法律</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">政治军事</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">科普读物</a></li>
+									<li style="display: inline-block;"><a href="" target="_blank">医学</a></li>
+								</ul>
+							</div>
+						<ul>
+                               <!--
+                               	作者：offline
+                               	时间：2017-10-12
+                               	描述：这里是广告
+                               -->
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/131f.jpg' %}"></a></li>
+							<li><a href="" target="_blank"><img src="{% static 'images/ha/132f.jpg' %}"></a></li>
+						</ul>
+					<span style="background: url(&quot;images/110.png&quot;) 0px -70px no-repeat; position: absolute; top: 0px; left: 745px; width: 31px; height: 31px;"></span></div>
+					</dd>
+				</dl>
+
+
+			</div></div>
+			</div>
+		</div>
+
+
+
+
+
+    </body>
+
+</html>
