@@ -20,18 +20,23 @@
 				<a href="{% url 'app:login' %}">会员登录</a>
 				<a href="{% url 'app:register' %}">注册新账号</a>
 			</div>
-			<div id="box1">
-				<input type="text" placeholder="用户名/手机号/邮箱" />
-			</div>
-			<div id="box2">
-				<input type="password" placeholder="密码" />
-			</div>
-			<div id="box3">
-				<a href="">忘记密码?</a>
-			</div>
-			<div id="box4">
-				<input type="submit" value="登录" />
-			</div>
+            <form action="{% url 'app:login' %}" method="post">
+                {% csrf_token %}
+                <div id="box1">
+				    <input type="text" name="name" placeholder="用户名" />
+                    <b style="color: red">{{ user_err }}</b>
+			    </div>
+                <div id="box2">
+                    <input type="password" name="password" placeholder="密码" />
+                    <b style="color: red">{{ ps_err }}</b>
+                </div>
+                <div id="box3">
+                    <a href="">忘记密码?</a>
+                </div>
+                <div id="box4">
+                    <input type="submit" value="登录" />
+                </div>
+            </form>
 			<div id="box5">
 				<a href="">百联通会员卡首次登录</a>
 			</div>

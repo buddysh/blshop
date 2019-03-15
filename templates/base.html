@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+            <title>Title</title>
+    {% endblock %}
+    <script src="{% static 'js/jquery-1.12.3.js' %}"></script>
+    <script src="{% static 'js/jquery.cookie.js' %}"></script>
+
+    {% block extcss %}
+
+    {% endblock %}
+
+
+</head>
+<body>
+
+    {% block header %}
+        <div class="top" id="top">
+			<div class="main">
+				<ul class="left-top">
+					<li><img src="{% static 'images/top1.jpg' %}"></li>
+					<li>百联集团旗下全渠道电商平台</li>
+					<li><a href="" target="_blank">网站导航</a></li>
+					<li><a href="" target="_blank">消息</a></li>
+				</ul>
+				<ul class="right-top">
+					<li>
+                        {% if user.name %}
+                            <b > 欢迎您， </b> <b style="color: red">{{ user.name }} </b>
+                        {% else %}
+                            <a href="{% url 'app:login' %}" class="iconfont" target="_self">
+                           <b style="color: red">   请登录 </b> </a>&nbsp;
+                        {% endif %}
+
+                        <a href="{% url 'app:register' %}" target="_self">注册</a></li>
+					<li><a href="car.html" target="_blank">我的订单</a></li>
+					<li><a href="" target="_blank">我的百联</a></li>
+					<li><a href="" target="_blank">充值缴费</a></li>
+					<li><a href="" target="_blank">客户服务</a></li>
+					<li><a href="" target="_blank">掌上百联</a></li>
+					<li><a href="{% url 'app:cart' %}" target="_self">购物车</a></li>
+                    <li><a href="{% url 'app:logout' %}">退出登陆</a></li>
+				</ul>
+			</div>
+		</div>
+    {% endblock %}
+    {% block content %}
+
+    {% endblock %}
+</body>
+</html>
+    {% block extjs %}
+
+    {% endblock %}

@@ -1,0 +1,235 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>购物车</title>
+
+{% endblock %}
+
+{% block extjs %}
+    <script src="{% static 'js/cart.js' %}" ></script>
+{% endblock %}
+
+{% block extcss %}
+        <link type="text/css" rel="stylesheet" href="{% static 'css/reset.css' %}"/>
+		<link rel="stylesheet" type="text/css" href="{% static 'css/car.css' %}" />
+
+{% endblock %}
+
+	<body>
+		<!--
+        	作者：1156671572@qq.com
+        	时间：2017-10-19
+        	描述：购物车重做
+        -->
+        {% block header %}
+            <div id="top">
+        	<div class="main">
+        		<ul id="ul1">
+        			<li id="top1"><a>百联集团666</a></li>
+        			<li id="top2"><a href="">网站导航</a></li>
+        			<li id="top3"><a href="">消息</a></li>
+        		</ul>
+        		<ul id="ul2">
+                    <li>
+                        {% if user.name %}
+                            <b > 欢迎您， </b> <b style="color: red">{{ user.name }} </b>
+                        {% else %}
+                            <a href="{% url 'app:login' %}" class="iconfont" target="_self">
+                                <b style="color: red">   请登录 </b> </a>
+                        {% endif %}
+                    </li>
+                    <li><a href="{% url 'app:register' %}" target="_self">注册</a></li>
+        			<li><a href="">我的订单</a></li>
+        			<li><a href="">我的百联</a></li>
+        			<li><a href="">充值缴费</a></li>
+        			<li><a href="">客户服务</a></li>
+        			<li><a href="{% url 'app:cart' %}" target="_self">购物车</a></li>
+                    <li><a href="{% url 'app:logout' %}">退出登陆</a></li>
+        		</ul>
+        	</div>
+        </div>
+
+        {% endblock %}
+
+
+        {% block content %}
+            <div id="qi">
+       		<div class="main">
+       			<div id="hang">
+       				<div id="hangimg">
+       					<a href="{% url 'app:index' %}"><img src="{% static 'images/banner.jpg' %}" /></a>
+       				</div>
+       				<div id="hanga">
+       					<a>购物车</a>
+       				</div>
+       			</div>
+       			<div id="fang">
+       				<a>现在</a>
+       				<a href="html/login.html">登录,</a>
+       				<a>您购物车中的商品将会永久保存</a>
+       			</div>
+       		</div>
+       	</div>
+
+            <div class="main">
+                <div id="in">
+                    <div id="in1">
+                        <a>全部商品</a>
+                        <a></a>
+                        <!--这里是统计商品数量-->
+                    </div>
+                    <div id="in2">
+                        <a>配送至</a>
+                        <div>
+                            <!--这里是地点jq插件-->
+                        </div>
+                    </div>
+                </div>
+
+                <div id="ip">
+                    <div id="ip1">
+                        <input type="checkbox" checked="checked" id="allSelect" />
+                        <a>全选</a>
+                    </div>
+                    <div id="ip2">
+                        <a>商品信息</a>
+                    </div>
+                    <div id="ip3">
+                        <a>单价(元)</a>
+                    </div>
+                    <div id="ip4">
+                        <a>件数</a>
+                    </div>
+                    <div id="ip5">
+                        <a>金额(元)</a>
+                    </div>
+                    <div id="ip6">
+                        <a>操作</a>
+                    </div>
+                </div>
+
+            {% for cart in carts %}
+
+
+
+                <div id="ip" class="cartlist">
+                    <div id="ip1">
+                        <input type="checkbox" checked="checked" id="Select" />
+                        <a></a>
+                    </div>
+                    <div id="ip2">
+                        <a>{{ cart.goods.name }}</a>
+                    </div>
+                    <div id="ip3">
+                        <a>{{ cart.goods.price }}</a>
+                    </div>
+                    <div id="ip4">
+                        <a>{{ cart.num }}</a>
+                    </div>
+                    <div id="ip5">
+                        <a></a>
+                    </div>
+{#                    <div id="ip6">#}
+{#                        <a>操作</a>#}
+{#                    </div>#}
+                </div>
+            {% endfor %}
+
+
+                <!--动态创建节点-->
+
+                <div id="bot">
+                    <div id="bot1">
+                        <input type="checkbox" checked="checked" id="allSelect" />
+                        <a>全选</a>
+                    </div>
+                    <div id="bot2">
+                        <a id="delSelect">删除</a>
+                    </div>
+                    <div id="bot3">
+                        <a>清楚失效商品</a>
+                        <a>移入收藏夹</a>
+                    </div>
+                    <div id="bot4">
+                        <a>已选择</a>
+                        <a>0</a>
+                        <a>件商品</a>
+                    </div>
+                    <div id="bot5">
+                        <a>商品金额(不含运费)：</a>
+                    </div>
+                    <div id="bot6">
+                        <p id="total">
+                            <!--总价-->
+                        </p>
+                        <a>优惠</a>
+                        <a>-￥0.00</a>
+                    </div>
+                    <div id="bot7">去结算</div>
+                </div>
+            </div>
+            <div id="bt">
+                <div class="main">
+                    <dl>
+                        <dt>新手入门</dt>
+                            <dd><a href="">购物流程</a></dd>
+                            <dd><a href="">会员介绍</a></dd>
+                            <dd><a href="">常见问题</a></dd>
+                            <dd><a href="">发票说明</a></dd>
+                            <dd><a href="">联系客服</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>配送服务</dt>
+                            <dd><a href="">配送范围及运费</a></dd>
+                            <dd><a href="">配送进度查询</a></dd>
+                            <dd><a href="">自提服务</a></dd>
+                            <dd><a href="">商品验货与签收</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>支付方式</dt>
+                            <dd><a href="">货到付款</a></dd>
+                            <dd><a href="">在线支付</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>售后服务</dt>
+                            <dd><a href="">退换货政策</a></dd>
+                            <dd><a href="">退换货流程</a></dd>
+                            <dd><a href="">退款说明</a></dd>
+                    </dl>
+                    <dl id="dl5">
+                        <dt>商家支持</dt>
+                            <dd><a href="">商家入驻</a></dd>
+                            <dd><a href="">商家规则</a></dd>
+                            <dd><a href="">商家常见问题</a></dd>
+                    </dl>
+                </div>
+            </div>
+            <!--最底部-->
+        	<div class="main">
+        		<div style="margin: 10px auto;width: 255px;">
+        			<a href="">关于我们</a>
+        			<a href="">联系我们</a>
+        			<a href="">加盟合作</a>
+        			<a href="">诚征英才</a>
+        			<a href="">友情链接</a>
+        		</div>
+        		<div style="margin:10px auto;width: 625px;">
+        			百联集团有限公司旗下 上海百联全渠道电子商务有限公司版权所有 | 客服电话：400-900-8800 | 沪ICP备15028847号
+        		</div>
+        		<div style="width: 348px;margin: 10px auto;">
+        			<a href="">互联网药品信息服务资质证书编号：沪-（非营业性）-2016-0044</a>
+        		</div>
+        		<div style="margin: 10px auto;width: 342px;">
+        			<a href="">沪公网安备 31010102002366号</a>
+        			<a href="">网购大家评</a>
+        			<a href="">上海工商</a>
+        			<a href="">经营执照</a>
+        		</div>
+        	</div>
+
+
+        {% endblock %}
+        
+        
+	</body>

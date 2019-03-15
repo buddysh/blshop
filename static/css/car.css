@@ -17,7 +17,7 @@ body{
 	height: 30px;
 	padding: 0 12px 0 18px;
 	float: left;
-	background: url(../image/bl.png) no-repeat 2px center;
+	background: url(/static/image/bl.png) no-repeat 2px center;
 	line-height: 30px;
 }
 #top2{
@@ -32,7 +32,7 @@ body{
 	line-height: 30px;
 }
 #ul2{
-	width: 577px;
+	width: 620px;
 	height: 30px;
 	float: right;
 }
@@ -43,12 +43,12 @@ body{
 	line-height: 30px;
 }
 #ul2 li:nth-child(1){
-	width: 118px;
+	width: 90px;
 	height: 30px;
 	margin: 0 1px;
 }
 #ul2 li:nth-child(1) a:nth-child(1){
-	width: 54px;height: 30px;padding: 0 10px;display: block;float: left;
+	width: 70px;height: 30px;padding: 0 10px;display: block;float: left;
 }
 #ul2 li:nth-child(2) a:nth-child(2){
 	width:24px;
@@ -119,23 +119,59 @@ body{
 #ip1{
 	width: 50px;height: 44px;margin-left: 15px;
 }
-#ip2{
-	width:390px;
-	height: 44px;margin-left: 80px;
+#ip2 {
+	width:360px;
+	height: 44px;margin-left: 30px;padding-left: 60px;
 }
-#ip3{
+#ip3 {
 	width: 138px;
 	height: 44px;
 }
-#ip4{
+#ip4 {
 	width: 102px;height: 44px;
 }
-#ip5{
+#ip5 {
 	width: 132px;height: 44px;
 }
 #ip6{
-	width: 64px;height: 44px;
+	width: 40px;height: 44px;
 }
+
+/*#cartdiv{*/
+	/*width: 990px;height: 44px;*/
+/*}*/
+
+/*#name {*/
+	/*width:360px;*/
+	/*height: 44px;margin-left: 30px;padding-left: 60px;*/
+/*}*/
+
+/*#name div{*/
+	/*float: left;padding-top: 16px;box-sizing: border-box;*/
+/*}*/
+
+/*#price {*/
+	/*width: 138px;height: 44px;*/
+/*}*/
+/*#num {*/
+	/*width: 102px;height: 44px;*/
+/*}*/
+/*#total {*/
+	/*width: 132px;height: 44px;*/
+/*}*/
+
+
+/*#cartlist{*/
+    /*list-style: none;*/
+    /*margin-left: 30px;*/
+/*}*/
+
+/*#cartlist li {*/
+    /*float: left;*/
+    /*display: inline;*/
+    /*margin-left: 50px;*/
+/*}*/
+
 #ib{
 	width: 990px;border-bottom: solid 1px #ccc;
 	height: 34px;margin-top: 16px;
@@ -261,3 +297,25 @@ dl{
 #delSelect:hover{
 	color: #C01133;text-decoration: underline;
 }
+
+#cartdiv {
+    background: #007aff;
+}
+
+/*#cartdiv ul{*/
+
+    /*list-style: none;*/
+    /*line-height: 80px;*/
+    /*margin-left: 30px;*/
+
+/*}*/
+
+/*#cartdiv li {*/
+
+    /*!*display: inline;*!*/
+    /*display: block;*/
+    /*line-height: 40px;*/
+    /*float:left;*/
+    /*list-style:none;*/
+
+/*}*/

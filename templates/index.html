@@ -1,44 +1,32 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-	<head> 
-		<meta charset="UTF-8">
-		<title>百联集团旗下全渠道电商平台</title>
+
+
+{% block title %}
+    <title>百联集团旗下全渠道电商平台</title>
+{% endblock %}
+
+{% block extcss %}
 		<link type="text/css" rel="stylesheet" href="{% static 'css/reset.css' %}" />
 		<link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}" />
 		<link type="text/css" rel="stylesheet" href="{% static 'iconfont/iconfont.css' %}" />
         <link type="text/css" rel="stylesheet" href="{% static 'css/swiper.min.css' %}" />
-{#		<script src="{% static 'js/move.js' %}"></script>#}
-		<script src="{% static 'js/jquery-1.12.3.js' %}"></script>
-		<script src="{% static 'js/jquery.cookie.js' %}"></script>
+
+{% endblock %}
+
+{% block extjs %}
+    {#	<script src="{% static 'js/move.js' %}"></script>#}
         <script src="{% static 'js/swiper.min.js' %}"></script>
         <script src="{% static 'js/myblshop.js' %}"></script>
-{#		<script src="{% static 'js/style.js' %}"></script>#}
-	</head>
+{#		<script src="{% static 'js/temp.js' %}"></script>#}
+
+{% endblock %}
+
 
     <body>
 
-		<div class="top" id="top">
-			<div class="main">
-				<ul class="left-top">
-					<li><img src="{% static 'images/top1.jpg' %}"></li>
-					<li>百联集团旗下全渠道电商平台</li>
-					<li><a href="" target="_blank">网站导航</a></li>
-					<li><a href="" target="_blank">消息</a></li>
-				</ul>
-				<ul class="right-top">
-					<li><a href="{% url 'app:login' %}" class="iconfont" target="_self">  请登录</a>&nbsp;&nbsp;
-                        <a href="{% url 'app:register' %}" target="_self">注册</a></li>
-					<li><a href="car.html" target="_blank">我的订单</a></li>
-					<li><a href="" target="_blank">我的百联</a></li>
-					<li><a href="" target="_blank">充值缴费</a></li>
-					<li><a href="" target="_blank">客户服务</a></li>
-					<li><a href="" target="_blank">掌上百联</a></li>
-					<li><a href="car.html" target="_blank">购物车</a></li>
-				</ul>
-			</div>
-		</div>
-		<div id="back">
+        {% block content %}
+            		<div id="back">
 			<span></span>
 		</div>
 		<div class="main" style="position: relative;margin-top: 20px ;">
@@ -1624,42 +1612,53 @@
 			<div class="shop main">
 				<img src="{% static 'images/ha/1.jpg' %}">
 				<ul id="shopx">
-					<!--<li>
-						<img src="images/ha/360.jpg" />
-						<a href="../百城e联/shopwhat.html">甘蒂牧场（MUH）全脂纯牛奶 1L 德国进口</a>
-						<p>￥7.9</p>
-						<p>参考价：￥13.0</p>
-					</li>
-					<li>
-						<img src="images/ha/361.jpg" />
-						<a href="../百城e联/shopwhat.html">甘蒂牧场（MUH）全脂纯牛奶 1L 德国进口</a>
-						<p>￥7.9</p>
-						<p>参考价：￥13.0</p>
-					</li>
-					<li>
-						<img src="images/ha/362.jpg" />
-						<a href="j../百城e联/shopwhat.html">甘蒂牧场（MUH）全脂纯牛奶 1L 德国进口</a>
-						<p>￥7.9</p>
-						<p>参考价：￥13.0</p>
-					</li>
-					<li>
-						<img src="images/ha/363.jpg" />
-						<a href="../百城e联/shopwhat.html">甘蒂牧场（MUH）全脂纯牛奶 1L 德国进口</a>
-						<p>￥7.9</p>
-						<p>参考价：￥13.0</p>
-					</li>
-					<li>
-						<img src="images/ha/364.jpg" />
-						<a href="../百城e联/shopwhat.html">甘蒂牧场（MUH）全脂纯牛奶 1L 德国进口</a>
-						<p>￥7.9</p>
-						<p>参考价：￥13.0</p>
-					</li>
-					<li style="border: 0 !important;">
-						<img src="images/ha/365.jpg" />
-						<a href="../百城e联/shopwhat.html">甘蒂牧场（MUH）全脂纯牛奶 1L 德国进口</a>
-						<p>￥7.9</p>
-						<p>参考价：￥13.0</p>
-					</li>-->
+
+                    {% for good in goods %}
+                        <li>
+                            <a href="{% url 'app:goodsdetail' good.id %}">
+                                <img src="{{ good.pic }}">
+                                {{ good.name }}</a>
+                            <p style="color: red">￥{{ good.price }}</p>
+                            <p>参考价：￥{{ good.referprice }}</p>
+					    </li>
+
+
+                    {% endfor %}
+
+
+
+
+{#					<li>#}
+{#						<img src="{% static 'images/ha/361.jpg' %}">#}
+{#						<a href="../百城e联/shopwhat.html">甘蒂牧场（MUH）全脂纯牛奶 1L 德国进口</a>#}
+{#						<p>￥7.9</p>#}
+{#						<p>参考价：￥13.0</p>#}
+{#					</li>#}
+{#					<li>#}
+{#						<img src="{% static 'images/ha/362.jpg' %}">#}
+{#						<a href="j../百城e联/shopwhat.html">甘蒂牧场（MUH）全脂纯牛奶 1L 德国进口</a>#}
+{#						<p>￥7.9</p>#}
+{#						<p>参考价：￥13.0</p>#}
+{#					</li>#}
+{#					<li>#}
+{#						<img src="{% static 'images/ha/363.jpg' %}">#}
+{#						<a href="../百城e联/shopwhat.html">甘蒂牧场（MUH）全脂纯牛奶 1L 德国进口</a>#}
+{#						<p>￥7.9</p>#}
+{#						<p>参考价：￥13.0</p>#}
+{#					</li>#}
+{#					<li>#}
+{#						<img src="{% static 'images/ha/364.jpg' %}">#}
+{#						<a href="../百城e联/shopwhat.html">甘蒂牧场（MUH）全脂纯牛奶 1L 德国进口</a>#}
+{#						<p>￥7.9</p>#}
+{#						<p>参考价：￥13.0</p>#}
+{#					</li>#}
+{#					<li style="border: 0 !important;">#}
+{#						<img src="{% static 'images/ha/365.jpg' %}">#}
+{#						<a href="../百城e联/shopwhat.html">甘蒂牧场（MUH）全脂纯牛奶 1L 德国进口</a>#}
+{#						<p>￥7.9</p>#}
+{#						<p>参考价：￥13.0</p>#}
+{#					</li>#}
+
 				</ul>
 			</div>
 			<div class="bannershop">
@@ -3512,8 +3511,7 @@
 			</div>
 		</div>
 
-
-
+        {% endblock %}
 
 
     </body>

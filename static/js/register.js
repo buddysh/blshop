@@ -3,14 +3,29 @@ $(function(){
 	var flag1 = false;
 	var flag2 = false;
 	var flag3 = false;
-	var flag4 = false;
-	var flag5 = false;
-	var flag6 = false;
 	var flag7 = false;
 	var flag8 = false;
 	
 		$("#inpt-show1").blur(function(){
 			$(this).parent().next("span").css("display","inline-block");
+
+			var name=$("#inpt-show1").val()
+			request_data={
+			    'name':name
+            }
+			$.get('/checkuser',request_data,function (response_data) {
+                // console.log(response_data)
+                if (response_data.status == 0){
+                    $('.inpt-show1').attr('src',"/static/images/no.png");
+                    $('#show1-t').html('用户名已注册');
+                    $('#show1-t').css("display","inline-block");
+                    // $(this).parent().next("span").find("a").css("display","inline-block");
+                    flag1 = false;
+
+                }
+            })
+              // console.log(response_data)
+
 			var reg = /^[a-zA-Z0-9]{4,20}$/;
 			var reg1 = /[a-zA-Z]/;
 			var str = $(this).get(0).value;
@@ -84,13 +99,31 @@ $(function(){
 	$("#check").click(function(){
 		if($("#check").is(':checked')){
 			flag8 = true;
+			if (flag1&flag2&flag3&flag7){
+                $('#inpt-show8').css('background','red')
+                }
+			// else {
+			//     $('#inpt-show8').css('background','gray')
+            //     // console.log($('#inpt-show8').css('color'))
+            //     }
+
 		}
 		else{
 			flag8 = false;
+            $('#inpt-show8').css('background','gray')
 		}
-		console.log(flag8);
+		// console.log(flag8);
 	})
-	
+
+    $('#inpt-show8').click(function () {
+        if (flag1&flag2&flag3&flag7&flag8){
+            $('.box form').submit()
+        }
+        // else {
+        //     $('#inpt-show8').css('background','gray')
+        //     // console.log($('#inpt-show8').css('color'))
+        // }
+    })
 	
 
 	

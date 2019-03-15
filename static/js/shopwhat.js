@@ -61,6 +61,46 @@ $(function(){
 		location.href = "car.html"
 	})
 
-	
+
+	$('#plus').click(function () {
+		var num=parseInt($(this).prev().html()) + 1
+		$(this).prev().html(num)
+	})
+
+	$('#minus').click(function () {
+		var num=parseInt($(this).next().html())
+		if (num>1){
+			nnum=num -1
+			$(this).next().html(nnum)
+		}
+
+	})
+
+
+	$('#addcart').click(function () {
+	//	判断是否登陆
+		var goodsid=$(this).attr('goodsid')
+		var goodsnum=$('#goodsnum').html()
+		request_data={
+			'goodsid':goodsid,
+			'goodsnum':goodsnum,
+		}
+		$.get('/addcart',request_data,function (response_data) {
+			console.log(response_data)
+			if (response_data.user_status == 0){
+				window.open('/login','_self')
+			}
+			else if (response_data.user_status == 1) {
+				// num=response_data.cart_num
+				// $(this).prev().html(num)
+				// window.open('/cart','_self')
+				alert('成功加入购物车')
+			}
+		})
+
+	})
+
+
+
 	
 })

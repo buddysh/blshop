@@ -1,0 +1,200 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>商品详情</title>
+{% endblock %}
+
+{% block extcss %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/reset.css' %}"/>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}"/>
+    <link type="text/css" rel="stylesheet" href="{% static 'css/shopwhat.css' %}"/>
+    <link type="text/css" rel="stylesheet" href="{% static 'iconfont/iconfont.css' %}"/>
+
+{% endblock %}
+
+{% block extjs %}
+{#    <script src="{% static 'js/style.js' %}"></script>#}
+    <script src="{% static 'js/shopwhat.js' %}"></script>
+    {#    <script src="{% static 'js/temp.js' %}"></script>#}
+
+{% endblock %}
+
+
+
+<body>
+
+{% block content %}
+    <div class="toptop"></div>
+    <div class="main" style="position: relative;margin-top: 20px ;">
+        <div class="logomian">
+            <a href="index.html"><img src="{% static 'images/banner.jpg' %}"></a>
+            <form>
+                <input type="search" placeholder="iphone8"
+                       style="width: 477px; height: 35px; border: 0px; padding: 0px 10px;"><input type="submit"
+                                                                                                  value="搜索"
+                                                                                                  style="cursor: pointer; width: 83px; height: 36px; background: rgb(192, 17, 51); border: 0px;">
+            </form>
+            <input type="button" value="安付宝OK卡专区  >" class="form-inpt"
+                   style="width: 121px; height: 40px; background: rgb(242, 242, 242); border: 1px solid rgb(226, 226, 226); border-radius: 2px;">
+            <br>
+            <ul class="inpt-ul">
+                <li><a>纸巾</a></li>
+                <li><a>洗发水</a></li>
+                <li><a>咖啡</a></li>
+                <li><a>奶粉</a></li>
+                <li><a>iphone</a></li>
+                <li><a>苹果</a></li>
+                <li><a>牙膏</a></li>
+                <li><a>耳机</a></li>
+                <li><a>牙刷</a></li>
+                <li style="border: 0;"><a>雅诗兰黛</a></li>
+            </ul>
+        </div>
+        <div class="banner-main">
+            <ul id="list2">
+                <li>
+                    <a href="">所有商品分类
+                        <span class="ii"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">生活日用
+                        <span class="ii"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">24H百货
+                        <span class="ii"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">全球购
+                        <span class="ii"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">精品闪购
+
+                        <span class="ii"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">电器城
+                        <span class="ii"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">奥莱代购
+                        <span class="ii"></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="">礼品卡
+                        <span class="ii"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <hr>
+        <div class="main kuqi">
+
+            <div id="smallImg">
+                {#            <img src="{% static 'images/ha/371.jpg' %}" width="448" height="448">#}
+                <img src="{{ good.pic }}" width="448" height="448">
+                <div id="smallArea" style="width: 335.253px; height: 335.253px;"></div>
+            </div>
+            <div id="bigArea" style="">
+                <img id="bigImg" src="{{ good.pic }}" width="600" height="600">
+            </div>
+            <div class="nav-right">
+                <h1>{{ good.name }}</h1>
+                <a>{{ good.desc }}</a>
+                <div id="px1">
+                    <div>抢啊！！！</div>
+                    <div>活动价：<a>{{ good.price }}</a></div>
+                </div>
+                <div class="kaka">
+                    <div>促销</div>
+                    <div>[满减] 满199减1</div>
+                </div>
+                <div class="kaka">
+                    <div>配送</div>
+                    <div>
+                        <section></section>
+                        <a>全场满68元包邮</a>
+                    </div>
+                </div>
+                <div class="kaka">
+                    <div>服务</div>
+                    <div>由<a></a>提供发货和售后服务
+                    </div>
+                    <ol>
+                        <li>不支持到店自提</li>
+                        <li>不支持7天无理由退货</li>
+                        <li>不支持货到付款</li>
+                    </ol>
+                </div>
+                <div class="kaka">
+                    <div>购买数量</div>
+                    <div class="aaa">
+                        <button id="minus">-</button>
+                        <button id="goodsnum">1</button>
+                        <button id="plus" goodsid={{ good.id }}>+</button>
+                    </div>
+                    <div class="bb"><span>限购99<a></a>件</span></div>
+
+                </div>
+                <div id="inpt">
+                    <div></div>
+                    <div>
+                        <input type="button" value="立即购买"
+                               style="width: 477px; height: 35px; border: 0px; padding: 0px 10px;">
+                        <input id = "addcart" goodsid={{ good.id }} type="submit" value="加入购物车"
+                               style="width: 83px; height: 36px; background: rgb(192, 17, 51); border: 0px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bott">
+            <div class="main" id="sx">
+                <ul id="xs">
+                    <li>关于我们</li>
+                    <li>联系我们</li>
+                    <li>加盟合作</li>
+                    <li>诚征英才</li>
+                    <li>友情链接</li>
+                </ul>
+                <p>百联集团有限公司旗下 上海百联全渠道电子商务有限公司版权所有 | 客服电话：400-900-8800 | 沪ICP备15028847号</p>
+                <p>
+                    <a href="http://res12.iblimg.com/respc-1/resources/v4.0/img/yaopingzigezheng.png?bl_mmc=blemall_-_0_-_0_-_0">互联网药品信息服务资质证书编号：沪-（非营业性）-2016-0044</a>
+                </p>
+                <ul id="xs1">
+                    <li>
+                        <img src="{% static 'images/ha/gongan.png' %}">
+                        <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010102002366&amp;bl_mmc=blemall_-_0_-_0_-_0">沪公网安备
+                            31010102002366号 </a>
+                    </li>
+                    <li>
+                        <img src="{% static 'images/ha/gongs.png' %}">
+                        <a href="http://shwg.dianping.com/?bl_mmc=blemall_-_0_-_0_-_0">网购大家评</a>
+                    </li>
+                    <li>
+                        <img src="{% static 'images/ha/wangjing.png' %}">
+                        <a href="http://218.242.124.22:8081/businessCheck/verifKey.do?showType=extShow&amp;serial=9031000020160729145737000001099658-SAIC_SHOW_310000-20160406145114141192&amp;signData=MEYCIQCUhx+ulQL4t9jJgfgCH1oeTxexuWOVww3Hel3/UlRyLQIhAO2fVtZDl0EkYb0p/3M50cXqe694wDQoJNuUKNdQNOWf&amp;bl_mmc=blemall_-_0_-_0_-_0">上海工商</a>
+                    </li>
+                    <li>
+                        <img src="{% static 'images/ha/zhizhao.png' %}">
+                        <a href="http://promotion.bl.com/nc/PC_HDGL20170407000001552_1592.html?bl_mmc=blemall_-_0_-_0_-_0">经营执照</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+
+    </div>
+{% endblock %}
+
+
+</body>
+

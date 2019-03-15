@@ -56,7 +56,7 @@ form{
 	background:  url(../images/3.png) repeat #e6133c;width: 190px;height: 461px;display: none;
 }
 .banner-main dt{
-	width: 190px;height: 35px;text-align: center;line-height: 34px;z-index: 10;background: #;
+	width: 190px;height: 35px;text-align: center;line-height: 34px;z-index: 10;
 }
 .banner-main .dd {
 	width: 170px;height: 32px;line-height: 32px;font-size: 14px;padding-left: 10px;
@@ -81,7 +81,7 @@ form{
 	margin-top: 20px;height: 251px;
 }
 #list2{
-	position: absolute;top:113px;height: 35px;background-color:  #3b3636;width: 100%;padding-left: 190px;left: 0;box-sizing: border-box;
+	position: absolute;top:113px;height: 35px;background-color:  #3b3636;width: 100%;padding-left: 190px;right: 0;box-sizing: border-box;
 }
 #list2 li {
 	float: left;color: #FFFFFF;font-size: 15px;height: 34px;padding:0 24px;
@@ -310,9 +310,9 @@ form{
 .icon{
 	width: 190px;padding-left: 10px;position: relative;box-sizing: border-box;padding-top: 35px;
 }
-.banner-main dt{
-	left: 0;top: 113px;position: absolute; background:#3b3636 ;
-}
+/*.banner-main dt{*/
+	/*left: 0;top: 113px;position: absolute; background:#3b3636 ;*/
+/*}*/
 #bannerx{
 	position: absolute;display: none;
 }
