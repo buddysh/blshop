@@ -296,7 +296,13 @@ def myOrder(request):
         response_data['user_status'] = 1
         response_data['user'] = user
         orders=user.order_set.all()
-        response_data['orders']=orders
+        for order in orders:
+            ordergoods=order.ordergoods_set.all()
+            for ordergood in ordergoods:
+                ordergood.goods.name +=ordergood.goods.name + 'X' + str(ordergood.number)
+
+            response_data['desc'] = ordergood.goods.name
+        response_data['orders'] = orders
 
         # 状态
         # -1 过期
