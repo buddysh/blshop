@@ -11,5 +11,11 @@ urlpatterns=[
     url(r'^goodsdetail/(\d+)$',views.goodsdetail,name='goodsdetail'),
     url(r'^cart/$',views.cart,name='cart'),
     url(r'^addcart/$',views.addcart,name='addcart'),
+
+    url(r'^changecartselect/$',views.changecartselect,name='changecartselect'),
+    # 生成order
+    url(r'^genOrder/$',views.genOrder,name='genOrder'),
+    #order列表
+    url(r'^myOrder/$',views.myOrder,name='myOrder'),
     # url(r'^goodslist/$',views.goodslist,name='goodslist'),
 ]

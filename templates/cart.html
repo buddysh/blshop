@@ -27,7 +27,7 @@
         	<div class="main">
         		<ul id="ul1">
         			<li id="top1"><a>百联集团666</a></li>
-        			<li id="top2"><a href="">网站导航</a></li>
+        			<li id="top2"><a href="{% url 'app:index' %}" target="_self">网站导航</a></li>
         			<li id="top3"><a href="">消息</a></li>
         		</ul>
         		<ul id="ul2">
@@ -40,7 +40,7 @@
                         {% endif %}
                     </li>
                     <li><a href="{% url 'app:register' %}" target="_self">注册</a></li>
-        			<li><a href="">我的订单</a></li>
+        			<li><a href="{% url 'app:myOrder' %}" target="_self">我的订单</a></li>
         			<li><a href="">我的百联</a></li>
         			<li><a href="">充值缴费</a></li>
         			<li><a href="">客户服务</a></li>
@@ -72,7 +72,7 @@
        		</div>
        	</div>
 
-            <div class="main">
+            <div class="main select-btn">
                 <div id="in">
                     <div id="in1">
                         <a>全部商品</a>
@@ -115,11 +115,11 @@
 
                 <div id="ip" class="cartlist">
                     <div id="ip1">
-                        <input type="checkbox" checked="checked" id="Select" />
+                        <input type="checkbox"  cartid="{{ cart.id }}" checked="checked" id="Select" />
                         <a></a>
                     </div>
                     <div id="ip2">
-                        <a>{{ cart.goods.name }}</a>
+                        <a >{{ cart.goods.name }}</a>
                     </div>
                     <div id="ip3">
                         <a>{{ cart.goods.price }}</a>
@@ -128,7 +128,7 @@
                         <a>{{ cart.num }}</a>
                     </div>
                     <div id="ip5">
-                        <a></a>
+                        <a ></a>
                     </div>
 {#                    <div id="ip6">#}
 {#                        <a>操作</a>#}
@@ -153,7 +153,7 @@
                     </div>
                     <div id="bot4">
                         <a>已选择</a>
-                        <a>0</a>
+                        <a id="goods-num">0</a>
                         <a>件商品</a>
                     </div>
                     <div id="bot5">
@@ -161,12 +161,13 @@
                     </div>
                     <div id="bot6">
                         <p id="total">
+                            ￥<i>0</i>
                             <!--总价-->
                         </p>
                         <a>优惠</a>
                         <a>-￥0.00</a>
                     </div>
-                    <div id="bot7">去结算</div>
+                    <div id="bot7"><button>去结算</button></div>
                 </div>
             </div>
             <div id="bt">

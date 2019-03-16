@@ -1,0 +1,154 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>我的订单</title>
+
+{% endblock %}
+
+{#{% block extjs %}#}
+{#    <script src="{% static 'js/temp.js' %}"></script>#}
+{#{% endblock %}#}
+
+{% block extcss %}
+    <link type="text/css" rel="stylesheet" href="{% static 'css/reset.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/myorder.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/car.css' %}" />
+{% endblock %}
+
+<body>
+
+
+{% block header %}
+    <div id="top">
+        <div class="main">
+            <ul id="ul1">
+                <li id="top1"><a>百联集团666</a></li>
+                <li id="top2"><a href="{% url 'app:index' %}" target="_self">网站导航</a></li>
+                <li id="top3"><a href="">消息</a></li>
+            </ul>
+            <ul id="ul2">
+                <li>
+                    {% if user.name %}
+                        <b> 欢迎您， </b> <b style="color: red">{{ user.name }} </b>
+                    {% else %}
+                        <a href="{% url 'app:login' %}" class="iconfont" target="_self">
+                            <b style="color: red">  请登录 </b> </a>
+                    {% endif %}
+                </li>
+                <li><a href="{% url 'app:register' %}" target="_self">注册</a></li>
+                <li><a href="{% url 'app:myOrder' %}" target="_self">我的订单</a></li>
+                <li><a href="">我的百联</a></li>
+                <li><a href="">充值缴费</a></li>
+                <li><a href="">客户服务</a></li>
+                <li><a href="{% url 'app:cart' %}" target="_self">购物车</a></li>
+                <li><a href="{% url 'app:logout' %}">退出登陆</a></li>
+            </ul>
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block content %}
+
+    <div class="main" style="margin-top: 20px;">
+        <a href="index.html"><img src="{% static 'images/banner.jpg' %}"></a>
+    </div>
+    <div class="main" style="margin-top: 20px;" id="da">
+        <div style="float: left;" >
+{#            全选<input type="checkbox" checked="checked" id="allSelect">#}
+            <h2>订单列表</h2>
+        </div>
+{#        <div style="float: right;"><a style="float: left;">登录可永久保存购物车</a></div>#}
+        <br>
+        <hr style="margin-top: 20px">
+        <div class="orderlist" style="margin-top: 20px">
+            <ul id="myorderlist">
+{#            <li id="acc"><p>您不打算买点什么吗？你个穷逼</p></li>#}
+            </ul>
+                    <ul id="list111">
+
+                        <li>订单编号</li>
+                        <li>订单描述</li>
+                        <li>订单价格</li>
+                        <li>订单状态</li>
+                        <li>操作</li>
+
+                    </ul>
+
+                {% for order in orders %}
+                    <ul id="list111">
+
+                        <li>{{ order.identifier }}</li>
+                        <li>{{ order.identifier }}</li>
+                        <li>{{ order.money }}</li>
+                        <li>
+                            {% if order.status == 0 %} 未付款
+                            {% elif order.status == 1 %} 待发货
+                            {% elif order.status == 2 %} 待收货
+                            {% elif order.status == 3 %} 待评价
+                            {% elif order.status == 4 %} 已评价
+                            {% endif %}
+                        </li>
+                        <li><input type="button" value="支付"></li>
+
+                    </ul>
+                {% endfor %}
+
+                {% for orderstat in orderstatus %}
+                    {{ orderstat }}
+                {% endfor %}
+
+
+        </div>
+{#        <p class="ppp">总价：<span id="total">0</span>元</p>#}
+{#        <a id="delSelect" href="javascript:;">删除选中</a>#}
+{##}
+{#        <div class="ali">#}
+{#            <input type="button" value="付款">#}
+{#        </div>#}
+
+    </div>
+
+    <div class="bott">
+        <div class="main" id="sx">
+            <ul id="xs">
+                <li>关于我们</li>
+                <li>联系我们</li>
+                <li>加盟合作</li>
+                <li>诚征英才</li>
+                <li>友情链接</li>
+            </ul>
+            <p>百联集团有限公司旗下 上海百联全渠道电子商务有限公司版权所有 | 客服电话：400-900-8800 | 沪ICP备15028847号</p>
+            <p>
+                <a href="http://res12.iblimg.com/respc-1/resources/v4.0/img/yaopingzigezheng.png?bl_mmc=blemall_-_0_-_0_-_0">互联网药品信息服务资质证书编号：沪-（非营业性）-2016-0044</a>
+            </p>
+            <ul id="xs1">
+                <li>
+                    <img src="{% static 'images/ha/gongan.png' %}">
+                    <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=31010102002366&amp;bl_mmc=blemall_-_0_-_0_-_0">沪公网安备
+                        31010102002366号 </a>
+                </li>
+                <li>
+                    <img src="{% static 'images/ha/gongs.png' %}">
+                    <a href="http://shwg.dianping.com/?bl_mmc=blemall_-_0_-_0_-_0">网购大家评</a>
+                </li>
+                <li>
+                    <img src="{% static 'images/ha/wangjing.png' %}">
+                    <a href="http://218.242.124.22:8081/businessCheck/verifKey.do?showType=extShow&amp;serial=9031000020160729145737000001099658-SAIC_SHOW_310000-20160406145114141192&amp;signData=MEYCIQCUhx+ulQL4t9jJgfgCH1oeTxexuWOVww3Hel3/UlRyLQIhAO2fVtZDl0EkYb0p/3M50cXqe694wDQoJNuUKNdQNOWf&amp;bl_mmc=blemall_-_0_-_0_-_0">上海工商</a>
+                </li>
+                <li>
+                    <img src="{% static 'images/ha/zhizhao.png' %}">
+                    <a href="http://promotion.bl.com/nc/PC_HDGL20170407000001552_1592.html?bl_mmc=blemall_-_0_-_0_-_0">经营执照</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+{% endblock %}
+
+
+</body>
+

@@ -34,3 +34,28 @@ class Cart(models.Model):
     isdelete = models.BooleanField(default=False)
     class Meta:
         db_table='cart'
+
+# 订单 模型类
+# 一个用户 对应 多个订单
+class Order(models.Model):
+    user=models.ForeignKey(User)
+    createtime = models.DateTimeField(auto_now_add=True)
+    updatetime = models.DateTimeField(auto_now=True)
+    # 状态
+    # -1 过期
+    # 0 未付款
+    # 1 已付款，待发货
+    # 2 已发货，待收货
+    # 3 已收货，待评价
+    # 4 已评价
+    status=models.IntegerField(default=0)
+    identifier=models.CharField(max_length=40)
+    money=models.DecimalField(max_digits=10,decimal_places=2)
+
+# 订单商品 模型类
+# 一个订单 对应 多个商品(订单商品)
+
+class OrderGoods(models.Model):
+    order=models.ForeignKey(Order)
+    goods=models.ForeignKey(Goods)
+    number =models.IntegerField()

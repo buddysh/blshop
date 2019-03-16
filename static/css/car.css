@@ -17,7 +17,7 @@ body{
 	height: 30px;
 	padding: 0 12px 0 18px;
 	float: left;
-	background: url(/static/image/bl.png) no-repeat 2px center;
+	background: url(/static/images/bl.png) no-repeat 2px center;
 	line-height: 30px;
 }
 #top2{

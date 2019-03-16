@@ -23,7 +23,7 @@
 				<ul class="left-top">
 					<li><img src="{% static 'images/top1.jpg' %}"></li>
 					<li>百联集团旗下全渠道电商平台</li>
-					<li><a href="" target="_blank">网站导航</a></li>
+					<li><a href="{% url 'app:index' %}" target="_self">网站导航</a></li>
 					<li><a href="" target="_blank">消息</a></li>
 				</ul>
 				<ul class="right-top">
@@ -36,7 +36,7 @@
                         {% endif %}
 
                         <a href="{% url 'app:register' %}" target="_self">注册</a></li>
-					<li><a href="car.html" target="_blank">我的订单</a></li>
+					<li><a href="{% url 'app:myOrder' %}" target="_self">我的订单</a></li>
 					<li><a href="" target="_blank">我的百联</a></li>
 					<li><a href="" target="_blank">充值缴费</a></li>
 					<li><a href="" target="_blank">客户服务</a></li>

@@ -8,7 +8,7 @@ from django.shortcuts import render, redirect
 
 
 # Create your views here.
-from app.models import User, Goods, Cart
+from app.models import User, Goods, Cart, Order, OrderGoods
 
 
 def index(request):
@@ -218,3 +218,105 @@ def addcart(request):
         response_data['user_status'] = 0
 
     return JsonResponse(response_data)
+
+# 修改购物车选中状态
+def changecartselect(request):
+    cartid = request.GET.get('cartid')
+    checked = request.GET.get('checked')
+    cart = Cart.objects.get(pk=cartid)
+
+    if checked == 'true':
+        cart.isselect = True
+        cart.save()
+    elif checked == 'false':
+        cart.isselect = False
+        cart.save()
+
+    response_data = {
+        'msg': '状态修改成功',
+        'status': 1,
+        # 'isselect': cart.isselect
+    }
+    return JsonResponse(response_data)
+
+def generateOrderNo():
+    ltime=str(time.time()).split('.')
+    no=ltime[0] + ltime[1] + str(random.randrange(1000,9999))
+    return no
+
+def genOrder(request):
+    # 获取
+    token = request.session.get('token')
+    userid = cache.get(token)
+    money=request.GET.get('money')
+    # print(money)
+
+    response_data ={
+        'user': None
+    }
+
+    if userid:
+        user = User.objects.get(pk=userid)
+        response_data['user_status'] = 1
+        order=Order()
+        order.user = user
+        order.identifier = generateOrderNo()
+        order.money=money
+        order.save()
+        carts = user.cart_set.filter(isselect=True)
+
+        for cart in carts:
+            ordergoods=OrderGoods()
+            ordergoods.order=order
+            ordergoods.goods=cart.goods
+            ordergoods.number=cart.num
+            ordergoods.save()
+            cart.delete()
+
+        # carts = user.cart_set.all()
+        # cart=Cart.objects.filter(user=user)
+        # goods=cart.goods
+        # response_data['carts']=carts
+        return JsonResponse(response_data)
+        # return render(request,'myOrder.html',context=response_data)
+    else:
+        return redirect('app:login')
+
+
+def myOrder(request):
+    # 获取
+    token = request.session.get('token')
+    userid = cache.get(token)
+    response_data ={
+        'user': None
+    }
+
+    if userid:
+        user = User.objects.get(pk=userid)
+        response_data['user_status'] = 1
+        response_data['user'] = user
+        orders=user.order_set.all()
+        response_data['orders']=orders
+
+        # 状态
+        # -1 过期
+        # 0 未付款
+        # 1 已付款，待发货
+        # 2 已发货，待收货
+        # 3 已收货，待评价
+        # 4 已评价
+
+        # orderstatus={
+        #     -1:'过期',
+        #     0:'未付款',
+        #     1:'已付款，待发货',
+        #     2:'已发货，待收货',
+        #     3:'已收货，待评价',
+        #     4:'已评价',
+        # }
+
+        # response_data['orderstatus']=orderstatus
+
+        return render(request, 'myOrder.html',context=response_data)
+    else:
+        return redirect('app:login')
