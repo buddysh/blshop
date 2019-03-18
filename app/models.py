@@ -57,5 +57,7 @@ class Order(models.Model):
 
 class OrderGoods(models.Model):
     order=models.ForeignKey(Order)
+    #订单中的商品
     goods=models.ForeignKey(Goods)
+    #订单中商品数量
     number =models.IntegerField()

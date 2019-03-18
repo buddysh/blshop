@@ -37,10 +37,10 @@
 
                         <a href="{% url 'app:register' %}" target="_self">注册</a></li>
 					<li><a href="{% url 'app:myOrder' %}" target="_self">我的订单</a></li>
-					<li><a href="" target="_blank">我的百联</a></li>
-					<li><a href="" target="_blank">充值缴费</a></li>
-					<li><a href="" target="_blank">客户服务</a></li>
-					<li><a href="" target="_blank">掌上百联</a></li>
+					<li><a href="{% url 'app:index' %}" target="_self">首页</a></li>
+{#					<li><a href="" target="_blank">充值缴费</a></li>#}
+{#					<li><a href="" target="_blank">客户服务</a></li>#}
+{#					<li><a href="" target="_blank">掌上百联</a></li>#}
 					<li><a href="{% url 'app:cart' %}" target="_self">购物车</a></li>
                     <li><a href="{% url 'app:logout' %}">退出登陆</a></li>
 				</ul>

@@ -2,12 +2,12 @@
 {% load static %}
 
 {% block title %}
-    <title>购物车</title>
+    <title>订单详情</title>
 
 {% endblock %}
 
 {% block extjs %}
-    <script src="{% static 'js/cart.js' %}" ></script>
+    <script src="{% static 'js/orderdetail.js' %}" ></script>
 {% endblock %}
 
 {% block extcss %}
@@ -75,7 +75,7 @@
             <div class="main select-btn">
                 <div id="in">
                     <div id="in1">
-                        <a>全部商品</a>
+                        <a>订单详情</a>
                         <a></a>
                         <!--这里是统计商品数量-->
                     </div>
@@ -88,12 +88,12 @@
                 </div>
 
                 <div id="ip">
-                    <div id="ip1">
-                        <input type="checkbox" checked="checked" id="allSelect" />
-                        <a>全选</a>
-                    </div>
+{#                    <div id="ip1">#}
+{#                        <input type="checkbox" checked="checked" id="allSelect" />#}
+{#                        <a>全选</a>#}
+{#                    </div>#}
                     <div id="ip2">
-                        <a>商品信息</a>
+                        <a>商品名称</a>
                     </div>
                     <div id="ip3">
                         <a>单价(元)</a>
@@ -109,23 +109,23 @@
                     </div>
                 </div>
 
-            {% for cart in carts %}
+            {% for ordergood in ordergoods %}
 
 
 
                 <div id="ip" class="cartlist">
-                    <div id="ip1">
-                        <input type="checkbox"  cartid="{{ cart.id }}" checked="checked" id="Select" />
-                        <a></a>
-                    </div>
+{#                    <div id="ip1">#}
+{#                        <input type="checkbox"  cartid="{{ cart.id }}" checked="checked" id="Select" />#}
+{#                        <a></a>#}
+{#                    </div>#}
                     <div id="ip2">
-                        <a >{{ cart.goods.name }}</a>
+                        <a >{{ ordergood.goods.name }}</a>
                     </div>
                     <div id="ip3">
-                        <a>{{ cart.goods.price }}</a>
+                        <a>{{ ordergood.goods.price }}</a>
                     </div>
                     <div id="ip4">
-                        <a>{{ cart.num }}</a>
+                        <a>{{ ordergood.number }}</a>
                     </div>
                     <div id="ip5">
                         <a ></a>
@@ -140,34 +140,34 @@
                 <!--动态创建节点-->
 
                 <div id="bot">
-                    <div id="bot1">
-                        <input type="checkbox" checked="checked" id="allSelect" />
-                        <a>全选</a>
-                    </div>
-                    <div id="bot2">
-                        <a id="delSelect">删除</a>
-                    </div>
-                    <div id="bot3">
-                        <a>清楚失效商品</a>
-                        <a>移入收藏夹</a>
-                    </div>
+{#                    <div id="bot1">#}
+{#                        <input type="checkbox" checked="checked" id="allSelect" />#}
+{#                        <a>全选</a>#}
+{#                    </div>#}
+{#                    <div id="bot2">#}
+{#                        <a id="delSelect">删除</a>#}
+{#                    </div>#}
+{#                    <div id="bot3">#}
+{#                        <a>清楚失效商品</a>#}
+{#                        <a>移入收藏夹</a>#}
+{#                    </div>#}
                     <div id="bot4">
-                        <a>已选择</a>
+                        <a>共</a>
                         <a id="goods-num">0</a>
                         <a>件商品</a>
                     </div>
                     <div id="bot5">
-                        <a>商品金额(不含运费)：</a>
+                        <a>订单金额(不含运费)：</a>
                     </div>
                     <div id="bot6">
                         <p id="total">
-                            ￥<i>0</i>
+                            ￥<i>{{ order.money }}</i>
                             <!--总价-->
                         </p>
                         <a>优惠</a>
                         <a>-￥0.00</a>
                     </div>
-                    <div id="bot7"><button>去结算</button></div>
+{#                    <div id="bot7"><button>去结算</button></div>#}
                 </div>
             </div>
             <div id="bt">

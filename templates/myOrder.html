@@ -10,6 +10,10 @@
 {#    <script src="{% static 'js/temp.js' %}"></script>#}
 {#{% endblock %}#}
 
+{% block extjs %}
+    <script src="{% static 'js/myOrder.js' %}"></script>
+{% endblock %}
+
 {% block extcss %}
     <link type="text/css" rel="stylesheet" href="{% static 'css/reset.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
@@ -39,9 +43,9 @@
                 </li>
                 <li><a href="{% url 'app:register' %}" target="_self">注册</a></li>
                 <li><a href="{% url 'app:myOrder' %}" target="_self">我的订单</a></li>
-                <li><a href="">我的百联</a></li>
-                <li><a href="">充值缴费</a></li>
-                <li><a href="">客户服务</a></li>
+                <li><a <a href="{% url 'app:index' %}" target="_self">首页</a></li>
+{#                <li><a href="">充值缴费</a></li>#}
+{#                <li><a href="">客户服务</a></li>#}
                 <li><a href="{% url 'app:cart' %}" target="_self">购物车</a></li>
                 <li><a href="{% url 'app:logout' %}">退出登陆</a></li>
             </ul>
@@ -78,10 +82,9 @@
                     </ul>
 
                 {% for order in orders %}
-                    <ul id="list111">
-
-                        <li>{{ order.identifier }}</li>
-                        <li>{{ desc }}</li>
+                    <ul id="list111" class="list111">
+                        <li><a href="{% url 'app:orderdetail' order.id %}" orderid="{{ order.id }}" >{{ order.identifier }}</a></li>
+                        <li id="orderdesc" orderid="{{ order.id }}" ></li>
                         <li>{{ order.money }}</li>
                         <li>
                             {% if order.status == 0 %} 未付款
@@ -90,15 +93,13 @@
                             {% elif order.status == 3 %} 待评价
                             {% elif order.status == 4 %} 已评价
                             {% endif %}
+
                         </li>
-                        <li><input type="button" value="支付"></li>
+                        <li><input type="button" value="未付款" orderid="{{ order.id }}" class="pay_btn" id="{{ order.status }}"></li>
 
                     </ul>
                 {% endfor %}
 
-                {% for orderstat in orderstatus %}
-                    {{ orderstat }}
-                {% endfor %}
 
 
         </div>
