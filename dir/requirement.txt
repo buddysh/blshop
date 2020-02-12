@@ -1,6 +1,6 @@
 certifi==2019.3.9
 chardet==3.0.4
-Django==1.11.4
+Django==1.11.28
 django-redis-sessions==0.6.1
 idna==2.8
 Naked==0.1.31
