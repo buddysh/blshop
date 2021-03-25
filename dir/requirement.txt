@@ -7,7 +7,7 @@ Naked==0.1.31
 pycryptodome==3.7.3
 PyMySQL==0.9.3
 pytz==2018.9
-PyYAML==5.1
+PyYAML==5.4
 redis==3.2.0
 requests==2.21.0
 shellescape==3.4.1
